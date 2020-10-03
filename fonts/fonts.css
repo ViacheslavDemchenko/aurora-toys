@@ -1,0 +1,57 @@
+/* FONTS */
+
+/* AmaticSC-Bold */
+
+@font-face {
+  font-family: 'AmaticSC-Bold';
+  src: url('../fonts/AmaticSC-Bold/AmaticSC-Bold.eot');
+  src: url('../fonts/AmaticSC-Bold/AmaticSC-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/AmaticSC-Bold/AmaticSC-Bold.svg#AmaticSC-Bold') format('svg'),
+       url('../fonts/AmaticSC-Bold/AmaticSC-Bold.ttf') format('truetype'),
+       url('../fonts/AmaticSC-Bold/AmaticSC-Bold.woff') format('woff'),
+       url('../fonts/AmaticSC-Bold/AmaticSC-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Montserrat-Regular */
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/Montserrat-Regular/Montserrat-Regular.eot');
+  src: url('../fonts/Montserrat-Regular/Montserrat-Regular.svg#Montserrat-Regular') format('svg'),
+       url('../fonts/Montserrat-Regular/Montserrat-Regular.ttf') format('truetype'),
+       url('../fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff'),
+       url('../fonts/Montserrat-Regular/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-Regular/Montserrat-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Montserrat-SemiBold */
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.eot');
+  src: url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg'),
+       url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.ttf') format('truetype'),
+       url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff') format('woff'),
+       url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Teko-Light */
+
+@font-face {
+  font-family: 'Teko-Light';
+  src: url('../fonts/Teko-Light/Teko-Light.eot');
+  src: url('../fonts/Teko-Light/Teko-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Teko-Light/Teko-Light.svg#Teko-Light') format('svg'),
+       url('../fonts/Teko-Light/Teko-Light.ttf') format('truetype'),
+       url('../fonts/Teko-Light/Teko-Light.woff') format('woff'),
+       url('../fonts/Teko-Light/Teko-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
