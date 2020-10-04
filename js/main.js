@@ -9,8 +9,7 @@ $('.owl-carousel').owlCarousel({
   dotsEach: 1,
   autoplay: true,
   autoplayTimeout: 3000,
-  animateOut: 'fadeOut',
-  dotsContainer: '#carousel-custom-dots'
+  animateOut: 'fadeOut'
 });
 "use strict";
 
