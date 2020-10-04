@@ -1,5 +1,19 @@
 "use strict";
 
+$('.owl-carousel').owlCarousel({
+  items: 1,
+  loop: true,
+  lazyLoad: true,
+  nav: false,
+  dots: true,
+  dotsEach: 1,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  animateOut: 'fadeOut',
+  dotsContainer: '#carousel-custom-dots'
+});
+"use strict";
+
 /*!
  * @copyright Copyright (c) 2017 IcoMoon.io
  * @license   Licensed under MIT license
