@@ -615,7 +615,6 @@ template {
 .header {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   background-image: url(../img/orange-arc.svg), url(../img/header-bg-desktop@1x.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: 43% 36px, center;
@@ -625,7 +624,6 @@ template {
 .header__inner {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -856,7 +854,7 @@ template {
 .footer {
   position: relative;
   width: 100%;
-  padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+  padding: 1.25rem 0.625rem 0.625rem 0.625rem;
   background: #2C2C2C;
 }
 
@@ -1390,6 +1388,48 @@ template {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .tree .tree-img {
+    width: 25rem;
+  }
+
+  .bitten-bisquit {
+    top: 7.25rem;
+    right: 13.1875rem;
+  }
+
+  .bisquit-1 {
+    top: 6.25rem;
+  }
+
+  .bisquit-2 {
+    top: 15rem;
+    right: 5.5rem;
+  }
+
+  .bisquit-3 {
+    top: 24rem;
+    right: 19.25rem;
+  }
+
+  .bisquit-content-1 {
+    top: 8.5625rem;
+    right: 13.3125rem;
+  }
+
+  .bisquit-content-2 {
+    top: 7.125rem;
+  }
+
+  .bisquit-content-3 {
+    top: 15.4375rem;
+    right: 5.4375rem;
+  }
+
+  .bisquit-content-4 {
+    top: 25.3125rem;
+    right: 20.8125rem;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -1530,6 +1570,50 @@ template {
     height: 7.4375rem;
     transform: translate(61px, 220px);
   }
+
+  .tree .tree-img {
+    width: 31.25rem;
+  }
+
+  .bitten-bisquit {
+    top: 8.6875rem;
+    right: 17.3125rem;
+  }
+
+  .bisquit-1 {
+    top: 7.1875rem;
+    right: 1.375rem;
+  }
+
+  .bisquit-2 {
+    top: 18.375rem;
+    right: 8.125rem;
+  }
+
+  .bisquit-3 {
+    top: 29.8125rem;
+    right: 26.25rem;
+  }
+
+  .bisquit-content-1 {
+    top: 10rem;
+    right: 17.4375rem;
+  }
+
+  .bisquit-content-2 {
+    top: 7.6875rem;
+    right: 1.8125rem;
+  }
+
+  .bisquit-content-3 {
+    top: 18.75rem;
+    right: 8.0625rem;
+  }
+
+  .bisquit-content-4 {
+    top: 31.25rem;
+    right: 27.75rem;
+  }
 }
 
 @media (min-width: 650px) {
@@ -1634,6 +1718,74 @@ template {
     height: 7.4375rem;
     transform: translate(108px, 237px);
   }
+
+  .tree .tree-img {
+    width: 43.75rem;
+  }
+
+  .bitten-bisquit {
+    top: 11.125rem;
+    right: 24.5625rem;
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+
+  .bisquit-1 {
+    top: 9.5625rem;
+    right: 2.625rem;
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+
+  .bisquit-2 {
+    top: 25.0625rem;
+    right: 11.25rem;
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+
+  .bisquit-3 {
+    top: 41.125rem;
+    right: 37rem;
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+
+  .bisquit-content-1 {
+    top: 13.1875rem;
+    right: 25.8125rem;
+  }
+
+  .bisquit-content-1 .bisquit__text {
+    max-width: 6.9375rem;
+  }
+
+  .bisquit-content-2 {
+    top: 11.25rem;
+    right: 3.25rem;
+  }
+
+  .bisquit-content-2 .bisquit__text {
+    max-width: 8.3125rem;
+  }
+
+  .bisquit-content-3 {
+    top: 26.625rem;
+    right: 12.375rem;
+  }
+
+  .bisquit-content-4 {
+    top: 43.75rem;
+    right: 39.5625rem;
+  }
+
+  .bisquit__title {
+    font-size: 1.5rem;
+  }
+
+  .bisquit__text {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -1725,6 +1877,13 @@ template {
   .socials-list .vk:hover {
     width: 2.3125rem;
     height: 2.5625rem;
+  }
+
+  .slider-section {
+    background-image: url(../img/avokado.png);
+    background-repeat: no-repeat;
+    background-position: 0% 10%;
+    background-size: 180px 268px;
   }
 
   .order {
@@ -1879,6 +2038,77 @@ template {
     margin-bottom: 8.125rem;
     font-size: 4rem;
   }
+
+  .tree .tree-img {
+    width: 52.5rem;
+  }
+
+  .bitten-bisquit {
+    top: 13.375rem;
+    right: 29.0625rem;
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  .bisquit-1 {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  .bisquit-2 {
+    top: 29.4375rem;
+    right: 12.6875rem;
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  .bisquit-3 {
+    top: 48.9375rem;
+    right: 43.6875rem;
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  .bisquit-content-1 {
+    top: 16.125rem;
+    right: 29.6875rem;
+  }
+
+  .bisquit-content-1 .bisquit__text {
+    max-width: 11.25rem;
+  }
+
+  .bisquit-content-2 {
+    top: 11.375rem;
+    right: 3.3125rem;
+  }
+
+  .bisquit-content-2 .bisquit__text {
+    max-width: 11.25rem;
+  }
+
+  .bisquit-content-3 {
+    top: 31.6875rem;
+    right: 12.6875rem;
+  }
+
+  .bisquit-content-3 .bisquit__text {
+    max-width: 12.25rem;
+  }
+
+  .bisquit-content-4 {
+    top: 51.625rem;
+    right: 47.0625rem;
+  }
+
+  .bisquit__title {
+    margin-bottom: 0.625rem;
+    font-size: 1.875rem;
+  }
+
+  .bisquit__text {
+    font-size: 1.375rem;
+  }
 }
 
 @media (min-width: 1100px) {
@@ -1894,6 +2124,12 @@ template {
 }
 
 @media (min-width: 1365px) {
+  .slider-section {
+    flex-direction: row;
+    justify-content: space-between;
+    background-position: 0% 430px;
+  }
+
   .footer .col__title {
     margin-bottom: 3.75rem;
     font-size: 1.5rem;
@@ -1906,6 +2142,70 @@ template {
 
   .footer .col-wrap {
     width: 80%;
+  }
+
+  .main-slider {
+    width: 50%;
+    padding-top: 15.625rem;
+  }
+
+  .main-slider__title--desktop {
+    display: block;
+  }
+
+  .main-slider__title--mobile {
+    margin-bottom: 0;
+    display: none;
+  }
+
+  .tree {
+    padding-top: 5.9375rem;
+    width: 43.75rem;
+    order: 1;
+  }
+
+  .tree .tree-img {
+    width: 43.75rem;
+  }
+
+  .bitten-bisquit {
+    top: 15rem;
+    right: 23.375rem;
+  }
+
+  .bisquit-1 {
+    top: 12.9375rem;
+    right: 1.25rem;
+  }
+
+  .bisquit-2 {
+    top: 28.4375rem;
+    right: 10.1875rem;
+  }
+
+  .bisquit-3 {
+    top: 44.25rem;
+    right: 34.4375rem;
+  }
+
+  .bisquit-content-1 {
+    top: 17.9375rem;
+    right: 23.9375rem;
+  }
+
+  .bisquit-content-2 {
+    top: 14.625rem;
+    right: 1.875rem;
+  }
+
+  .bisquit-content-3 {
+    top: 30.75rem;
+    right: 10.1875rem;
+  }
+
+  .bisquit-content-4 {
+    top: 46.8125rem;
+    right: 37.5625rem;
   }
 }
 
@@ -1976,7 +2276,6 @@ template {
 
   .slider-section {
     padding-top: 0;
-    flex-direction: row;
     background-image: url(../img/avokado.png);
     background-repeat: no-repeat;
     background-position: 0% 430px;
@@ -2094,19 +2393,6 @@ template {
     transform: translate(112px, 374px);
   }
 
-  .main-slider {
-    width: 50%;
-    padding-top: 15.625rem;
-  }
-
-  .main-slider__title--desktop {
-    display: block;
-  }
-
-  .main-slider__title--mobile {
-    display: none;
-  }
-
   .main-slider .slider {
     width: 28.8125rem;
     height: 34.375rem;
@@ -2123,87 +2409,7 @@ template {
   }
 
   .slider-wrap {
-    padding-left: 30%;
-  }
-
-  .tree {
-    padding-top: 5.9375rem;
-    width: 50%;
-    order: 1;
-  }
-
-  .tree .tree-img {
-    width: auto;
-  }
-
-  .bitten-bisquit {
-    top: 16.5625rem;
-    right: 28.4375rem;
-    width: 17.125rem;
-    height: 17.125rem;
-  }
-
-  .bisquit-1 {
-    top: 14.625rem;
-    right: 1.5625rem;
-    width: 17.125rem;
-    height: 17.125rem;
-  }
-
-  .bisquit-2 {
-    top: 33.5625rem;
-    right: 11.5625rem;
-    width: 17.125rem;
-    height: 17.125rem;
-  }
-
-  .bisquit-3 {
-    top: 52.9375rem;
-    right: 41.5625rem;
-    width: 17.125rem;
-    height: 17.125rem;
-  }
-
-  .bisquit-content-1 {
-    top: 20.75rem;
-    right: 30.1875rem;
-  }
-
-  .bisquit-content-1 .bisquit__text {
-    max-width: 17.3125rem;
-  }
-
-  .bisquit-content-2 {
-    top: 17.625rem;
-    right: 1.5rem;
-  }
-
-  .bisquit-content-2 .bisquit__text {
-    max-width: 17.3125rem;
-  }
-
-  .bisquit-content-3 {
-    top: 36.8125rem;
-    right: 12.375rem;
-  }
-
-  .bisquit-content-3 .bisquit__text {
-    max-width: 15.625rem;
-  }
-
-  .bisquit-content-4 {
-    top: 57.5rem;
-    right: 46.1875rem;
-  }
-
-  .bisquit__title {
-    margin-bottom: 1.25rem;
-    font-size: 3rem;
-  }
-
-  .bisquit__text {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    padding-left: 25%;
   }
 }
 
@@ -2218,6 +2424,86 @@ template {
 
   .footer .col-wrap {
     width: 56%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .tree {
+    width: auto;
+  }
+
+  .tree .tree-img {
+    width: auto;
+  }
+
+  .bitten-bisquit {
+    top: 16.1875rem;
+    right: 25.375rem;
+    width: 17.125rem;
+    height: 17.125rem;
+  }
+
+  .bisquit-1 {
+    top: 14.0625rem;
+    right: 1.5625rem;
+    width: 17.125rem;
+    height: 17.125rem;
+  }
+
+  .bisquit-2 {
+    top: 34rem;
+    right: 11.1875rem;
+    width: 17.125rem;
+    height: 17.125rem;
+  }
+
+  .bisquit-3 {
+    top: 52.375rem;
+    right: 39.8125rem;
+    width: 17.125rem;
+    height: 17.125rem;
+  }
+
+  .bisquit-content-1 {
+    top: 19.9375rem;
+    right: 26.875rem;
+  }
+
+  .bisquit-content-1 .bisquit__text {
+    max-width: 12.75rem;
+  }
+
+  .bisquit-content-2 {
+    top: 16.6875rem;
+    right: 1.375rem;
+  }
+
+  .bisquit-content-2 .bisquit__text {
+    max-width: 17.3125rem;
+  }
+
+  .bisquit-content-3 {
+    top: 36.625rem;
+    right: 11.9375rem;
+  }
+
+  .bisquit-content-3 .bisquit__text {
+    max-width: 15.625rem;
+  }
+
+  .bisquit-content-4 {
+    top: 55.5625rem;
+    right: 44.0625rem;
+  }
+
+  .bisquit__title {
+    margin-bottom: 1.25rem;
+    font-size: 3rem;
+  }
+
+  .bisquit__text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
 }
 
