@@ -3,7 +3,7 @@ $('.catalog-slider.owl-carousel').owlCarousel({
     loop: true,
     nav: false,
     dots: false,
-    stagePadding: -10,
+    stagePadding: -20,
     responsiveClass:true,
     responsive:{
         0:{
@@ -19,9 +19,9 @@ $('.catalog-slider.owl-carousel').owlCarousel({
     }
 });
 
-$('.next').click(function () {
+$('.prev').click(function () {
     $('.catalog-slider.owl-carousel').trigger('next.owl.carousel');
 });
-$('.prev').click(function () {
+$('.next').click(function () {
     $('.catalog-slider.owl-carousel').trigger('prev.owl.carousel');
 });

@@ -1,5 +1,32 @@
 "use strict";
 
+var cardDetails = document.querySelectorAll('.details-btn');
+var overlay = document.querySelector('.overlay');
+var card = document.querySelector('.card');
+var cardClose = document.querySelector('.card-close');
+var body = document.getElementsByTagName('body')[0];
+cardDetails.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    overlay.classList.add('overlay--active');
+    body.classList.add('no-scroll');
+  });
+});
+cardClose.addEventListener('click', function () {
+  overlay.classList.remove('overlay--active');
+  body.classList.remove('no-scroll');
+});
+"use strict";
+
+var url = document.location.href;
+$.each($('.menu__link'), function () {
+  if (this.href == url) {
+    $(this).addClass('menu__link--active');
+  }
+
+  ;
+});
+"use strict";
+
 /*!
  * @copyright Copyright (c) 2017 IcoMoon.io
  * @license   Licensed under MIT license

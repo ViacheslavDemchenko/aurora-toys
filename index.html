@@ -22,7 +22,7 @@
         <div class="header__inner">
           <div class="top-menu">
             <ul class="menu-list">
-              <li class="menu__item"><a class="menu__link menu__link--active" href="index.html">Главная</a></li>
+              <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
               <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог</a></li>
             </ul><a class="phone" href="tel:+79155612976">+7 (915) 561-29-76
               <svg width="30" height="35">
@@ -37,7 +37,12 @@
               <div class="logo__title">Aurora Toys</div>
               <div class="logo__subtitle">Доставка по всей России</div><img src="img/sun.svg" width="90" height="55" alt="Логотип">
             </div>
-            <h1 class="main-title">Приветствуем в нашем магазине мягких игрушек<img class="shark-header" src="img/shark-header@1x.png" width="202" height="132" alt="Акула"></h1><img class="header-line" src="img/header-line.svg" width="308" height="119" alt="">
+            <h1 class="main-title">Приветствуем в нашем магазине мягких игрушек
+              <picture>
+                <source srcset="img/shark-header@1x.webp, img/shark-header@2x.webp 2x" type="image/webp">
+                <source srcset="img/shark-header@1x.png, img/shark-header@2x.png 2x" type="image/png"><img class="shark-header" src="img/shark-header@1x.png" srcset="img/shark-header@2x.png" width="202" height="132" alt="Акула">
+              </picture>
+            </h1><img class="header-line" src="img/header-line.svg" width="308" height="119" alt="">
             <div class="catalog"><a class="catalog__circle" href="catalog.html">Каталог</a>
               <div class="catalog__text">Жми, не укусит</div>
             </div>
@@ -56,9 +61,24 @@
           <div class="slider-wrap">
             <div class="main-slider__title main-slider__title--desktop">Почему нас выбирают</div>
             <div class="slider owl-carousel">
-              <div class="slide"><img src="img/slide-1@1x.jpg" width="462" height="550" alt="Игрушка"></div>
-              <div class="slide"><img src="img/slide-2@1x.jpg" width="462" height="550" alt="Игрушка"></div>
-              <div class="slide"><img src="img/slide-3@1x.jpg" width="462" height="550" alt="Игрушка"></div>
+              <div class="slide">
+                <picture>
+                  <source srcset="img/slide-1@1x.webp, img/slide-1@2x.webp 2x" type="image/webp">
+                  <source srcset="img/slide-1@1x.png, img/slide-1@2x.png 2x" type="image/png"><img src="img/slide-1@1x.png" srcset="img/slide-1@2x.png" width="462" height="550" alt="Игрушка">
+                </picture>
+              </div>
+              <div class="slide">
+                <picture>
+                  <source srcset="img/slide-2@1x.webp, img/slide-2@2x.webp 2x" type="image/webp">
+                  <source srcset="img/slide-2@1x.png, img/slide-2@2x.png 2x" type="image/png"><img src="img/slide-2@1x.png" srcset="img/slide-2@2x.png" width="462" height="550" alt="Игрушка">
+                </picture>
+              </div>
+              <div class="slide">
+                <picture>
+                  <source srcset="img/slide-3@1x.webp, img/slide-3@2x.webp 2x" type="image/webp">
+                  <source srcset="img/slide-3@1x.png, img/slide-3@2x.png 2x" type="image/png"><img src="img/slide-3@1x.png" srcset="img/slide-3@2x.png" width="462" height="550" alt="Игрушка">
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -140,7 +160,12 @@
             </div>
           </div>
           <div class="catalog catalog--footer"><a class="catalog__circle catalog__circle--footer" href="catalog.html">Каталог</a></div>
-          <div class="fourth-col"><img class="unicorn" src="img/unicorn@1x.png" width="235" height="176" alt="Игрушка единорог"><img class="unicorn-line" src="img/unicorn-line.svg" width="92" height="116" alt=""></div>
+          <div class="fourth-col">
+            <picture>
+              <source srcset="img/unicorn@1x.webp, img/unicorn@2x.webp 2x" type="image/webp">
+              <source srcset="img/unicorn@1x.png, img/unicorn@2x.png 2x" type="image/png"><img class="unicorn" src="img/unicorn@1x.png" srcset="img/unicorn@2x.png" width="235" height="176" alt="Игрушка единорог">
+            </picture><img class="unicorn-line" src="img/unicorn-line.svg" width="92" height="116" alt="">
+          </div>
         </div>
       </footer>
     </div>

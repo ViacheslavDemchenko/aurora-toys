@@ -48,6 +48,10 @@ body {
   max-width: 120rem;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* Box-sizing-model */
 
 *,
@@ -992,7 +996,7 @@ template {
   font-family: "Montserrat-Regular";
   font-weight: normal;
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #FFFFFF;
 }
 
@@ -1001,8 +1005,8 @@ template {
   top: 50%;
   left: -1.125rem;
   transform: translateY(-50%);
-  width: 0.9375rem;
-  height: 1.25rem;
+  width: 0.625rem;
+  height: 0.9375rem;
   fill: #fff;
 }
 
@@ -1356,7 +1360,7 @@ template {
 
 .catalog-slider .catalog-slide {
   position: relative;
-  width: 17.5rem;
+  width: 16.5625rem;
   height: 25.9375rem;
   display: flex;
   flex-direction: column;
@@ -1365,6 +1369,7 @@ template {
   box-shadow: 0px 5px 13px rgba(120, 118, 118, 0.25);
   border-radius: 1.25rem;
   transition: all 0.5s ease-out;
+  margin-left: 0.3125rem;
 }
 
 .catalog-slider .catalog-slide:hover {
@@ -1379,6 +1384,10 @@ template {
   font-size: 1.875rem;
   text-align: center;
   color: #F47F12;
+}
+
+.catalog-slider .catalog-slide__title--shark {
+  margin-top: -1.5625rem;
 }
 
 .catalog-slider .catalog-slide__price {
@@ -1429,7 +1438,7 @@ template {
   bottom: 0;
   display: flex;
   width: 100%;
-  height: 5.9375rem;
+  height: 4.375rem;
 }
 
 .catalog-slider .catalog-slide .details-btn,
@@ -1442,6 +1451,7 @@ template {
   font-weight: normal;
   font-style: normal;
   font-size: 1.125rem;
+  cursor: pointer;
 }
 
 .catalog-slider .catalog-slide .details-btn {
@@ -1463,13 +1473,9 @@ template {
 }
 
 .catalog-slider .shark-toy {
-  margin-top: -7.1875rem;
-  width: 30.375rem;
-  height: 22.125rem;
-}
-
-.catalog-slider .shark-toy + .catalog-slide__title {
-  margin-top: -4.875rem;
+  margin-top: -5.9375rem;
+  width: 17.5rem;
+  height: 17.5rem;
 }
 
 .catalog-slider .lama-toy {
@@ -1494,6 +1500,125 @@ template {
   width: 18.25rem;
   height: 15.0625rem;
   margin: -9.0625rem 0 4.0625rem 0;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 4000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.84);
+}
+
+.overlay--active {
+  display: block;
+}
+
+.card {
+  display: none;
+  position: fixed;
+  z-index: 5000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 54.375rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 0 0 3.75rem;
+  background: #fff;
+}
+
+.card .left-col,
+.card .right-col {
+  width: 50%;
+}
+
+.card .toy-title {
+  margin: 4.125rem 4.375rem 4.25rem 0;
+  text-align: center;
+  font-family: "Montserrat-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.875rem;
+  line-height: 80%;
+  color: #000000;
+}
+
+.card .img-list {
+  display: flex;
+  margin-bottom: 2.4375rem;
+}
+
+.card .img__item {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card .img__item:not(:last-child) {
+  margin-right: 2.375rem;
+}
+
+.card .img__item-big {
+  width: 20.8125rem;
+  height: 19.4375rem;
+  margin-bottom: 3.1875rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card .to-cart-btn {
+  height: 4.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat-SemiBold";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 50%;
+  text-align: center;
+  color: #FFFFFF;
+  background: #FF9C36;
+  cursor: pointer;
+}
+
+.card .card-close {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.3;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.card .card-close:hover {
+  opacity: 1;
+}
+
+.card .card-close::before,
+.card .card-close::after {
+  position: absolute;
+  left: 0.9375rem;
+  content: "";
+  height: 2.0625rem;
+  width: 0.125rem;
+  background-color: #333;
+}
+
+.card .card-close:before {
+  transform: rotate(45deg);
+}
+
+.card .card-close:after {
+  transform: rotate(-45deg);
 }
 
 @media screen and (min-width: 320px) {
@@ -1687,7 +1812,7 @@ template {
   }
 
   .top-menu .phone svg {
-    left: -2.5rem;
+    left: -1.5625rem;
     width: 1.25rem;
     height: 1.5625rem;
   }
@@ -2068,7 +2193,7 @@ template {
   }
 
   .slider-section {
-    background-image: url(../img/avokado.png);
+    background-image: url(../img/avokado@1x.png);
     background-repeat: no-repeat;
     background-position: 0% 10%;
     background-size: 180px 268px;
@@ -2162,10 +2287,11 @@ template {
   }
 
   .top-menu .phone {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .top-menu .phone svg {
+    left: -1.875rem;
     width: 1.5625rem;
     height: 1.875rem;
   }
@@ -2304,6 +2430,7 @@ template {
   }
 
   .catalog-slider .catalog-slide {
+    margin-left: 0.625rem;
     height: 26.875rem;
   }
 
@@ -2318,6 +2445,12 @@ template {
   .catalog-slider .catalog-slide .details-btn,
   .catalog-slider .catalog-slide .to-cart-btn {
     font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (min-resolution: 192dpi) {
+  .slider-section {
+    background-image: url(../img/avokado@2x.png);
   }
 }
 
@@ -2429,11 +2562,12 @@ template {
 
   .catalog-slider-wrap {
     width: 62.5rem;
-    height: 39.0625rem;
+    height: 40.625rem;
   }
 
   .catalog-slider .catalog-slide {
     height: 29.375rem;
+    margin-left: 1.25rem;
   }
 
   .catalog-slider .catalog-slide:hover {
@@ -2447,13 +2581,9 @@ template {
   }
 
   .catalog-slider .shark-toy {
-    margin-top: -9.0625rem;
-    width: 33.125rem;
-    height: 24.875rem;
-  }
-
-  .catalog-slider .shark-toy + .catalog-slide__title {
-    margin-top: -3.625rem;
+    margin-top: -8rem;
+    width: 21.875rem;
+    height: 21.875rem;
   }
 
   .catalog-slider .lama-toy {
@@ -2478,6 +2608,12 @@ template {
     width: 21rem;
     height: 17.8125rem;
     margin: -11.4375rem 0 5.8125rem 0;
+  }
+}
+
+@media (min-width: 1365px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1365px) and (min-resolution: 192dpi) {
+  .slider-section {
+    background-image: url(../img/avokado@2x.png);
   }
 }
 
@@ -2548,7 +2684,6 @@ template {
 
   .slider-section {
     padding-top: 0;
-    background-image: url(../img/avokado.png);
     background-repeat: no-repeat;
     background-position: 0% 430px;
     background-size: 220px 308px;
@@ -2609,12 +2744,12 @@ template {
   }
 
   .top-menu .phone {
-    font-size: 1.75rem;
+    font-size: 1.125rem;
   }
 
   .top-menu .phone svg {
-    width: 1.875rem;
-    height: 2.1875rem;
+    width: 1.25rem;
+    height: 1.5625rem;
   }
 
   .logo {
@@ -2685,6 +2820,12 @@ template {
   }
 }
 
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 192dpi) {
+  .slider-section {
+    background-image: url(../img/avokado@2x.png);
+  }
+}
+
 @media (min-width: 1500px) {
   .footer .col__title {
     font-size: 1.75rem;
@@ -2699,15 +2840,15 @@ template {
   }
 
   .catalog-slider-main-wrap .next {
-    left: 1.5625rem;
+    left: 0.625rem;
   }
 
   .catalog-slider-main-wrap .prev {
-    right: 1.5625rem;
+    right: 0.625rem;
   }
 
   .catalog-slider-wrap {
-    width: 85.1875rem;
+    width: 87.5rem;
     height: 50rem;
     margin: 0 auto 12.5rem auto;
   }
@@ -2719,6 +2860,7 @@ template {
   .catalog-slider .catalog-slide {
     width: 23.9375rem;
     height: 35.1875rem;
+    margin-left: 1.5625rem;
   }
 
   .catalog-slider .catalog-slide__title {
@@ -2804,6 +2946,26 @@ template {
   .bisquit__text {
     font-size: 1.5rem;
     line-height: 2.5rem;
+  }
+
+  .catalog-slider-main-wrap .next {
+    left: 1.5625rem;
+  }
+
+  .catalog-slider .catalog-slide__title--shark {
+    margin-top: -5rem;
+  }
+
+  .catalog-slider .shark-toy {
+    margin-top: -7.5rem;
+    width: 33.125rem;
+    height: 24.875rem;
+  }
+}
+
+@media (min-width: 1925px) {
+  .catalog-slider-main-wrap .prev {
+    right: 1.5625rem;
   }
 }
 

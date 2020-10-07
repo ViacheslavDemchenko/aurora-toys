@@ -22,7 +22,7 @@
         <div class="header__inner">
           <div class="top-menu">
             <ul class="menu-list">
-              <li class="menu__item"><a class="menu__link menu__link--active" href="index.html">Главная</a></li>
+              <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
               <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог</a></li>
             </ul><a class="phone" href="tel:+79155612976">+7 (915) 561-29-76
               <svg width="30" height="35">
@@ -42,7 +42,11 @@
         <div class="catalog-slider-main-wrap">
           <div class="catalog-slider-wrap">
             <div class="catalog-slider owl-carousel">
-              <div class="catalog-slide"><img class="avocado-toy" src="img/avocado-toy@1x.png" width="224" height="224" alt="Игрушка авокадо">
+              <div class="catalog-slide">
+                <picture>
+                  <source srcset="img/avocado-toy@1x.webp, img/avocado-toy@2x.webp 2x" type="image/webp">
+                  <source srcset="img/avocado-toy@1x.png, img/avocado-toy@2x.png 2x" type="image/png"><img class="avocado-toy" src="img/avocado-toy@1x.png" srcset="img/avocado-toy@2x.png" width="224" height="224" alt="Игрушка авокадо">
+                </picture>
                 <div class="catalog-slide__title">Авокадо</div>
                 <div class="catalog-slide__price">850 &#8381</div>
                 <div class="catalog-slide-count">
@@ -57,8 +61,12 @@
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
-              <div class="catalog-slide"><img class="shark-toy" src="img/shark-toy@1x.png" width="530" height="398" alt="Игрушка акула">
-                <div class="catalog-slide__title">Акула</div>
+              <div class="catalog-slide">
+                <picture>
+                  <source srcset="img/shark-toy@1x.webp, img/shark-toy@2x.webp 2x" type="image/webp">
+                  <source srcset="img/shark-toy@1x.png, img/shark-toy@2x.png 2x" type="image/png"><img class="shark-toy" src="img/shark-toy@1x.png" srcset="img/shark-toy@2x.png" width="530" height="398" alt="Игрушка акула">
+                </picture>
+                <div class="catalog-slide__title catalog-slide__title--shark">Акула</div>
                 <div class="catalog-slide__price">1200 &#8381</div>
                 <div class="catalog-slide-count">
                   <div class="catalog-slide-arrows">
@@ -72,7 +80,11 @@
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
-              <div class="catalog-slide"><img class="lama-toy" src="img/lama-toy@1x.png" width="210" height="210" alt="Игрушка радужная лама">
+              <div class="catalog-slide">
+                <picture>
+                  <source srcset="img/lama-toy@1x.webp, img/lama-toy@2x.webp 2x" type="image/webp">
+                  <source srcset="img/lama-toy@1x.png, img/lama-toy@2x.png 2x" type="image/png"><img class="lama-toy" src="img/lama-toy@1x.png" srcset="img/lama-toy@2x.png" width="210" height="210" alt="Игрушка радужная лама">
+                </picture>
                 <div class="catalog-slide__title">Радужная лама</div>
                 <div class="catalog-slide__price">1000 &#8381</div>
                 <div class="catalog-slide-count">
@@ -87,7 +99,11 @@
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
-              <div class="catalog-slide"><img class="cat-toy" src="img/cat-toy@1x.png" width="254" height="254" alt="Игрушка плюшевый кот">
+              <div class="catalog-slide">
+                <picture>
+                  <source srcset="img/cat-toy@1x.webp, img/cat-toy@2x.webp 2x" type="image/webp">
+                  <source srcset="img/cat-toy@1x.png, img/cat-toy@2x.png 2x" type="image/png"><img class="cat-toy" src="img/cat-toy@1x.png" srcset="img/cat-toy@2x.png" width="254" height="254" alt="Игрушка плюшевый кот">
+                </picture>
                 <div class="catalog-slide__title">Плюшевый кот</div>
                 <div class="catalog-slide__price">1900 &#8381</div>
                 <div class="catalog-slide-count">
@@ -102,7 +118,11 @@
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
-              <div class="catalog-slide"><img class="corgi-toy" src="img/corgi-toy@1x.png" width="336" height="285" alt="Игрушка корги">
+              <div class="catalog-slide">
+                <picture>
+                  <source srcset="img/corgi-toy@1x.webp, img/corgi-toy@2x.webp 2x" type="image/webp">
+                  <source srcset="img/corgi-toy@1x.png, img/corgi-toy@2x.png 2x" type="image/png"><img class="corgi-toy" src="img/corgi-toy@1x.png" srcset="img/corgi-toy@2x.png" width="336" height="285" alt="Игрушка корги">
+                </picture>
                 <div class="catalog-slide__title">Корги</div>
                 <div class="catalog-slide__price">850 &#8381</div>
                 <div class="catalog-slide-count">
@@ -117,9 +137,13 @@
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
-              <div class="catalog-slide"><img class="seal-toy" src="img/seal-toy@1x.png" width="259" height="259" alt="Игрушка белый тюлень">
+              <div class="catalog-slide">
+                <picture>
+                  <source srcset="img/seal-toy@1x.webp, img/seal-toy@2x.webp 2x" type="image/webp">
+                  <source srcset="img/seal-toy@1x.png, img/seal-toy@2x.png 2x" type="image/png"><img class="seal-toy" src="img/seal-toy@1x.png" srcset="img/seal-toy@2x.png" width="259" height="259" alt="Игрушка белый тюлень">
+                </picture>
                 <div class="catalog-slide__title">Белый тюлень</div>
-                <div class="catalog-slide__price">850 &#8381</div>
+                <div class="catalog-slide__price">1200 &#8381</div>
                 <div class="catalog-slide-count">
                   <div class="catalog-slide-arrows">
                     <div class="count__arrow-left">&#60;</div>
@@ -177,9 +201,54 @@
             </div>
           </div>
           <div class="catalog catalog--footer"><a class="catalog__circle catalog__circle--footer" href="catalog.html">Каталог</a></div>
-          <div class="fourth-col"><img class="unicorn" src="img/unicorn@1x.png" width="235" height="176" alt="Игрушка единорог"><img class="unicorn-line" src="img/unicorn-line.svg" width="92" height="116" alt=""></div>
+          <div class="fourth-col">
+            <picture>
+              <source srcset="img/unicorn@1x.webp, img/unicorn@2x.webp 2x" type="image/webp">
+              <source srcset="img/unicorn@1x.png, img/unicorn@2x.png 2x" type="image/png"><img class="unicorn" src="img/unicorn@1x.png" srcset="img/unicorn@2x.png" width="235" height="176" alt="Игрушка единорог">
+            </picture><img class="unicorn-line" src="img/unicorn-line.svg" width="92" height="116" alt="">
+          </div>
         </div>
       </footer>
+      <div class="overlay">
+        <div class="card"><span class="card-close"></span>
+          <div class="left-col">
+            <div class="logo">
+              <div class="logo__title">Aurora Toys</div>
+              <div class="logo__subtitle">Доставка по всей России</div><img src="img/sun.svg" width="90" height="55" alt="Логотип">
+            </div>
+          </div>
+          <div class="right-col">
+            <div class="toy-title">Акула</div>
+            <div class="img-list">
+              <div class="img__item">
+                <picture>
+                  <source srcset="img/card-shark-sm@1x.webp, img/card-shark-sm@2x.webp 2x" type="image/webp">
+                  <source srcset="img/card-shark-sm@1x.jpg, img/card-shark-sm@2x.jpg 2x" type="image/png"><img src="img/card-shark-sm@1x.jpg" srcset="img/card-shark-sm@2x.jpg" width="65" height="65" alt="Игрушка акула">
+                </picture>
+              </div>
+              <div class="img__item">
+                <picture>
+                  <source srcset="img/card-shark-sm-2@1x.webp, img/card-shark-sm-2@2x.webp 2x" type="image/webp">
+                  <source srcset="img/card-shark-sm-2@1x.jpg, img/card-shark-sm-2@2x.jpg 2x" type="image/png"><img src="img/card-shark-sm-2@1x.jpg" srcset="img/card-shark-sm-2@2x.jpg" width="65" height="65" alt="Игрушка акула">
+                </picture>
+              </div>
+              <div class="img__item">
+                <picture>
+                  <source srcset="img/card-shark-sm-3@1x.webp, img/card-shark-sm-3@2x.webp 2x" type="image/webp">
+                  <source srcset="img/card-shark-sm-3@1x.jpg, img/card-shark-sm-3@2x.jpg 2x" type="image/png"><img src="img/card-shark-sm-3@1x.jpg" srcset="img/card-shark-sm-3@2x.jpg" width="65" height="65" alt="Игрушка акула">
+                </picture>
+              </div>
+            </div>
+            <div class="img__item-big">
+              <picture>
+                <source srcset="img/card-shark-big@1x.webp, img/card-shark-big@2x.webp 2x" type="image/webp">
+                <source srcset="img/card-shark-big@1x.jpg, img/card-shark-big@2x.jpg 2x" type="image/png"><img src="img/card-shark-big@1x.jpg" srcset="img/card-shark-big@2x.jpg" width="333" height="311" alt="Игрушка акула">
+              </picture>
+            </div>
+            <div class="to-cart-btn">В корзину</div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/owl.carousel.min.js"></script>
