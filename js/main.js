@@ -135,16 +135,13 @@ var currentToy;
 var images = document.querySelectorAll('.img__item img');
 cardDetails.forEach(function (btn) {
   btn.addEventListener('click', function () {
-    var attr = btn.getAttribute('data-card'); // console.log(attr);
-
+    var attr = btn.getAttribute('data-card');
     findToy(attr);
   });
 });
 
 function findToy(attr) {
-  currentToy = toys[attr]; // console.log(currentToy);
-  // console.log(currentToy.img_1_sm);
-
+  currentToy = toys[attr];
   dataFill();
 }
 
@@ -165,24 +162,25 @@ function dataFill() {
   document.querySelector('.img__item-big img').setAttribute('alt', currentToy.alt);
   images.forEach(function (img, index) {
     img.addEventListener('mouseenter', function () {
-      var link = img.getAttribute('src'); // console.log(img);
-
+      var link = img.getAttribute('src');
       var newnewLink = link.replace(/sm/i, 'big');
-      console.log(link);
-      console.log(newnewLink);
       document.querySelector('.img__item-big img').setAttribute('src', newnewLink);
     });
   });
-} // function changeImg() {
-//     images.forEach( (img, index) => {
-//         img.addEventListener('mouseenter', () => {
-//             console.log(img);
-//             console.log(index);
-//             console.log(currentToy);
-//             document.querySelector('.img__item-big img').setAttribute('src', 'currentToy.img_' + (index + 1) + '_full');
-//         });
-//     });
-// }
+}
+
+var fullImgClose = document.querySelector('.full-img-close');
+var fullImg = document.querySelector('.full-img');
+fullImgClose.addEventListener('click', function () {
+  fullImg.classList.remove('full-img--active');
+});
+var imgBig = document.querySelector('.img__item-big img');
+imgBig.addEventListener('click', function () {
+  var link = imgBig.getAttribute('src');
+  var newnewLink = link.replace(/big/i, 'full');
+  document.querySelector('.full-img img').setAttribute('src', newnewLink);
+  fullImg.classList.add('full-img--active');
+});
 "use strict";
 
 var url = document.location.href;

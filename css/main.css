@@ -1621,11 +1621,11 @@ template {
   background-color: #333;
 }
 
-.card .card-close:before {
+.card .card-close::before {
   transform: rotate(45deg);
 }
 
-.card .card-close:after {
+.card .card-close::after {
   transform: rotate(-45deg);
 }
 
@@ -1721,6 +1721,48 @@ template {
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+.full-img {
+  display: none;
+  position: fixed;
+  z-index: 6000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.full-img--active {
+  display: block;
+}
+
+.full-img-close {
+  position: absolute;
+  z-index: 7000;
+  right: -1.875rem;
+  top: -0.25rem;
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.full-img-close::before,
+.full-img-close::after {
+  position: absolute;
+  left: 0.9375rem;
+  content: "";
+  height: 2.0625rem;
+  width: 0.125rem;
+  background-color: #fff;
+}
+
+.full-img-close::before {
+  transform: rotate(45deg);
+}
+
+.full-img-close::after {
+  transform: rotate(-45deg);
 }
 
 @media screen and (min-width: 320px) {
