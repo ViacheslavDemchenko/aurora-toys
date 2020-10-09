@@ -22,7 +22,7 @@
         <div class="header__inner">
           <div class="top-menu">
             <ul class="menu-list">
-              <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+              <li class="menu__item"><a class="menu__link menu__link--active" href="index.html">Главная</a></li>
               <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог</a></li>
             </ul><a class="phone" href="tel:+79155612976">+7 (915) 561-29-76
               <svg width="30" height="35">
@@ -57,7 +57,7 @@
                   <div class="count__number">1</div>
                 </div>
                 <div class="catalog-slide-btns">
-                  <div class="details-btn">Подробнее</div>
+                  <div class="details-btn" data-card="avocado">Подробнее</div>
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
@@ -76,7 +76,7 @@
                   <div class="count__number">1</div>
                 </div>
                 <div class="catalog-slide-btns">
-                  <div class="details-btn">Подробнее</div>
+                  <div class="details-btn" data-card="shark">Подробнее</div>
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
@@ -95,7 +95,7 @@
                   <div class="count__number">1</div>
                 </div>
                 <div class="catalog-slide-btns">
-                  <div class="details-btn">Подробнее</div>
+                  <div class="details-btn" data-card="lama">Подробнее</div>
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
@@ -114,7 +114,7 @@
                   <div class="count__number">1</div>
                 </div>
                 <div class="catalog-slide-btns">
-                  <div class="details-btn">Подробнее</div>
+                  <div class="details-btn" data-card="cat">Подробнее</div>
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
@@ -133,7 +133,7 @@
                   <div class="count__number">1</div>
                 </div>
                 <div class="catalog-slide-btns">
-                  <div class="details-btn">Подробнее</div>
+                  <div class="details-btn" data-card="corgi">Подробнее</div>
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
@@ -152,7 +152,7 @@
                   <div class="count__number">1</div>
                 </div>
                 <div class="catalog-slide-btns">
-                  <div class="details-btn">Подробнее</div>
+                  <div class="details-btn" data-card="seal">Подробнее</div>
                   <div class="to-cart-btn">В корзину</div>
                 </div>
               </div>
@@ -212,39 +212,47 @@
       <div class="overlay">
         <div class="card"><span class="card-close"></span>
           <div class="left-col">
-            <div class="logo">
-              <div class="logo__title">Aurora Toys</div>
-              <div class="logo__subtitle">Доставка по всей России</div><img src="img/sun.svg" width="90" height="55" alt="Логотип">
+            <div class="left-col__inner">
+              <div class="logo">
+                <div class="logo__title">Aurora Toys</div>
+                <div class="logo__subtitle">Доставка по всей России</div><img src="img/sun.svg" width="90" height="55" alt="Логотип">
+              </div>
+              <div class="toy-info">
+                <div class="toy-size">
+                  <div class="size__title">Размер</div>
+                  <div class="size__num"></div>
+                </div>
+                <div class="toy-material"> 
+                  <div class="material__title">Материал</div>
+                  <div class="material__type"></div>
+                </div>
+                <div class="toy-wadding">
+                  <div class="wadding__title">Набивка</div>
+                  <div class="wadding__type"></div>
+                </div>
+              </div>
+              <div class="toy-description">Мягкая игрушка акула, не смотря на грозный вид, станет отличным другом для вашей семьи</div>
+              <div class="price-block">
+                <div class="toy-count">
+                  <div class="count-arrows">
+                    <div class="count__arrow-left">&#60;</div>
+                    <div class="count__arrow-right">&#62;</div>
+                  </div>
+                  <div class="toy__number">1</div>
+                </div>
+                <div class="price"></div>
+              </div>
+              <div class="to-catalog-btn">Вернуться в каталог</div>
             </div>
           </div>
           <div class="right-col">
-            <div class="toy-title">Акула</div>
+            <div class="toy-title"></div>
             <div class="img-list">
-              <div class="img__item">
-                <picture>
-                  <source srcset="img/card-shark-sm@1x.webp, img/card-shark-sm@2x.webp 2x" type="image/webp">
-                  <source srcset="img/card-shark-sm@1x.jpg, img/card-shark-sm@2x.jpg 2x" type="image/png"><img src="img/card-shark-sm@1x.jpg" srcset="img/card-shark-sm@2x.jpg" width="65" height="65" alt="Игрушка акула">
-                </picture>
-              </div>
-              <div class="img__item">
-                <picture>
-                  <source srcset="img/card-shark-sm-2@1x.webp, img/card-shark-sm-2@2x.webp 2x" type="image/webp">
-                  <source srcset="img/card-shark-sm-2@1x.jpg, img/card-shark-sm-2@2x.jpg 2x" type="image/png"><img src="img/card-shark-sm-2@1x.jpg" srcset="img/card-shark-sm-2@2x.jpg" width="65" height="65" alt="Игрушка акула">
-                </picture>
-              </div>
-              <div class="img__item">
-                <picture>
-                  <source srcset="img/card-shark-sm-3@1x.webp, img/card-shark-sm-3@2x.webp 2x" type="image/webp">
-                  <source srcset="img/card-shark-sm-3@1x.jpg, img/card-shark-sm-3@2x.jpg 2x" type="image/png"><img src="img/card-shark-sm-3@1x.jpg" srcset="img/card-shark-sm-3@2x.jpg" width="65" height="65" alt="Игрушка акула">
-                </picture>
-              </div>
+              <div class="img__item img__item-first"><img src="#" width="65" height="65" alt=""></div>
+              <div class="img__item img__item-second"><img src="#" width="65" height="65" alt=""></div>
+              <div class="img__item img__item-third"><img src="#" width="65" height="65" alt=""></div>
             </div>
-            <div class="img__item-big">
-              <picture>
-                <source srcset="img/card-shark-big@1x.webp, img/card-shark-big@2x.webp 2x" type="image/webp">
-                <source srcset="img/card-shark-big@1x.jpg, img/card-shark-big@2x.jpg 2x" type="image/png"><img src="img/card-shark-big@1x.jpg" srcset="img/card-shark-big@2x.jpg" width="333" height="311" alt="Игрушка акула">
-              </picture>
-            </div>
+            <div class="img__item-big"><img src="#" width="333" height="333" alt=""></div>
             <div class="to-cart-btn">В корзину</div>
           </div>
         </div>
