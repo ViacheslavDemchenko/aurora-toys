@@ -135,13 +135,16 @@ var currentToy;
 var images = document.querySelectorAll('.img__item img');
 cardDetails.forEach(function (btn) {
   btn.addEventListener('click', function () {
-    var attr = btn.getAttribute('data-card');
+    var attr = btn.getAttribute('data-card'); // console.log(attr);
+
     findToy(attr);
   });
 });
 
 function findToy(attr) {
-  currentToy = toys[attr];
+  currentToy = toys[attr]; // console.log(currentToy);
+  // console.log(currentToy.img_1_sm);
+
   dataFill();
 }
 
@@ -162,8 +165,11 @@ function dataFill() {
   document.querySelector('.img__item-big img').setAttribute('alt', currentToy.alt);
   images.forEach(function (img, index) {
     img.addEventListener('mouseenter', function () {
-      var link = img.getAttribute('src');
+      var link = img.getAttribute('src'); // console.log(img);
+
       var newnewLink = link.replace(/sm/i, 'big');
+      console.log(link);
+      console.log(newnewLink);
       document.querySelector('.img__item-big img').setAttribute('src', newnewLink);
     });
   });
@@ -178,6 +184,8 @@ var imgBig = document.querySelector('.img__item-big img');
 imgBig.addEventListener('click', function () {
   var link = imgBig.getAttribute('src');
   var newnewLink = link.replace(/big/i, 'full');
+  console.log(link);
+  console.log(newnewLink);
   document.querySelector('.full-img img').setAttribute('src', newnewLink);
   fullImg.classList.add('full-img--active');
 });
