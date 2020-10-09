@@ -5,6 +5,7 @@ var overlay = document.querySelector('.overlay');
 var card = document.querySelector('.card');
 var cardClose = document.querySelector('.card-close');
 var body = document.getElementsByTagName('body')[0];
+var toCatalogBtn = document.querySelector('.to-catalog-btn');
 cardDetails.forEach(function (btn) {
   btn.addEventListener('click', function () {
     overlay.classList.add('overlay--active');
@@ -12,6 +13,10 @@ cardDetails.forEach(function (btn) {
   });
 });
 cardClose.addEventListener('click', function () {
+  overlay.classList.remove('overlay--active');
+  body.classList.remove('no-scroll');
+});
+toCatalogBtn.addEventListener('click', function () {
   overlay.classList.remove('overlay--active');
   body.classList.remove('no-scroll');
 });
