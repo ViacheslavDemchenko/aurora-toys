@@ -742,8 +742,8 @@ template {
 }
 
 .socials-list .vk {
-  width: 1.375rem;
-  height: 1.625rem;
+  width: 1.125rem;
+  height: 1.3125rem;
   background-image: url(../img/vk.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1569,6 +1569,8 @@ template {
 .card .img__item {
   width: 2.25rem;
   height: 2.25rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.2);
   overflow: hidden;
   cursor: pointer;
 }
@@ -1580,11 +1582,13 @@ template {
 .card .img__item img {
   width: 2.25rem;
   height: 2.25rem;
+  border-radius: 0.3125rem;
 }
 
 .card .img__item-big {
   width: 11.5625rem;
   height: 10.8125rem;
+  border-radius: 0.3125rem;
   margin: 0 1rem 3.25rem 0;
   overflow: hidden;
   cursor: pointer;
@@ -1593,6 +1597,7 @@ template {
 .card .img__item-big img {
   width: 11.5625rem;
   height: 10.8125rem;
+  border-radius: 0.3125rem;
 }
 
 .card .to-catalog-btn,
@@ -1968,8 +1973,8 @@ template {
   }
 
   .socials-list .vk {
-    width: 1.6875rem;
-    height: 1.9375rem;
+    width: 1.4375rem;
+    height: 1.625rem;
   }
 
   .footer__inner {
