@@ -1506,7 +1506,7 @@ template {
   display: none;
   position: fixed;
   z-index: 4000;
-  top: 3.25rem;
+  top: 2.25rem;
   bottom: 0;
   left: 0;
   right: 0;
@@ -1524,55 +1524,75 @@ template {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 54.375rem;
+  width: 19.375rem;
   display: flex;
-  justify-content: space-between;
-  padding: 1.25rem 0 0 0;
+  flex-direction: column;
+  padding: 1.25rem 1.5rem 0 1.5rem;
   background: #fff;
+}
+
+.card .logo {
+  display: none;
 }
 
 .card .left-col,
 .card .right-col {
-  width: 50%;
+  width: 100%;
 }
 
-.card .left-col__inner {
-  padding-left: 3.8125rem;
+.card .right-col {
+  order: -1;
 }
 
 .card .toy-title {
-  margin: 4.125rem 4.375rem 4.25rem 0;
+  margin: 4.125rem 0 2.5rem 0;
   text-align: center;
   font-family: "Montserrat-Regular";
   font-weight: normal;
   font-style: normal;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   line-height: 80%;
   color: #000000;
+}
+
+.card .images-wrap {
+  display: flex;
 }
 
 .card .img-list {
   display: flex;
   margin-bottom: 2.4375rem;
+  flex-direction: column;
+  order: +2;
 }
 
 .card .img__item {
-  width: 4.0625rem;
-  height: 4.0625rem;
+  width: 2.25rem;
+  height: 2.25rem;
   overflow: hidden;
   cursor: pointer;
 }
 
 .card .img__item:not(:last-child) {
-  margin-right: 2.375rem;
+  margin-bottom: 1.3125rem;
+}
+
+.card .img__item img {
+  width: 2.25rem;
+  height: 2.25rem;
 }
 
 .card .img__item-big {
-  width: 20.8125rem;
-  height: 19.4375rem;
-  margin-bottom: 3.1875rem;
+  width: 11.5625rem;
+  height: 10.8125rem;
+  margin: 0 1rem 3.25rem 0;
   overflow: hidden;
   cursor: pointer;
+}
+
+.card .img__item-big img {
+  width: 11.5625rem;
+  height: 10.8125rem;
 }
 
 .card .to-catalog-btn,
@@ -1585,7 +1605,7 @@ template {
   font-family: "Montserrat-SemiBold";
   font-weight: 600;
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 0.625rem;
   line-height: 50%;
   text-align: center;
   cursor: pointer;
@@ -1630,8 +1650,8 @@ template {
 }
 
 .card .toy-info {
-  width: 19.5rem;
-  margin: 6rem 0 2.125rem 0;
+  max-width: 19.5rem;
+  margin: 3.25rem 0 2.125rem 0;
 }
 
 .card .toy-size,
@@ -1653,25 +1673,19 @@ template {
 }
 
 .card .toy-description {
-  width: 20.1875rem;
-  margin-bottom: 3rem;
-  font-family: "Montserrat-Regular";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1.125rem;
-  line-height: 96%;
-  color: #000;
+  display: none;
 }
 
 .card .price-block {
   display: flex;
   align-items: center;
+  margin-bottom: 5.875rem;
 }
 
 .card .toy-count {
   width: 4.0625rem;
   min-height: 1.75rem;
-  margin: 1.75rem 3.8125rem 1.25rem 0;
+  margin: 1.75rem 1.125rem 1.25rem 0;
   display: flex;
   justify-content: space-between;
   border: 1px solid rgba(0, 0, 0, 0.4);
@@ -1707,20 +1721,30 @@ template {
   font-family: "Montserrat-Regular";
   font-weight: normal;
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 0.9375rem;
   line-height: 80%;
   color: #FF8718;
 }
 
-.card .to-catalog-btn {
+.card .to-catalog-btn,
+.card .to-cart-btn {
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 50%;
+  cursor: pointer;
+}
+
+.card .to-catalog-btn {
+  left: 0;
   color: rgba(0, 0, 0, 0.7);
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+}
+
+.card .to-cart-btn {
+  right: 0;
+  color: #FFFFFF;
+  background: #FF9C36;
 }
 
 .full-img {
@@ -1730,8 +1754,13 @@ template {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 56.25rem;
-  height: 56.25rem;
+  width: 18.75rem;
+  height: 18.75rem;
+}
+
+.full-img img {
+  width: 18.75rem;
+  height: 18.75rem;
 }
 
 .full-img--active {
@@ -1741,8 +1770,8 @@ template {
 .full-img-close {
   position: absolute;
   z-index: 7000;
-  right: -1.875rem;
-  top: -0.25rem;
+  right: 0.25rem;
+  top: -1.875rem;
   width: 2rem;
   height: 2rem;
   transition: all 0.5s ease-out;
@@ -1756,7 +1785,7 @@ template {
   content: "";
   height: 2.0625rem;
   width: 0.125rem;
-  background-color: #fff;
+  background-color: #000;
 }
 
 .full-img-close::before {
@@ -1863,6 +1892,10 @@ template {
   .bisquit-content-4 {
     top: 25.3125rem;
     right: 20.8125rem;
+  }
+
+  .card {
+    width: 23.75rem;
   }
 }
 
@@ -2049,6 +2082,20 @@ template {
     top: 31.25rem;
     right: 27.75rem;
   }
+
+  .card {
+    width: 31.25rem;
+  }
+
+  .full-img {
+    width: 31.25rem;
+    height: 31.25rem;
+  }
+
+  .full-img img {
+    width: 31.25rem;
+    height: 31.25rem;
+  }
 }
 
 @media (min-width: 650px) {
@@ -2228,7 +2275,7 @@ template {
     display: block;
     position: absolute;
     z-index: 2000;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     padding: 0.625rem;
     cursor: pointer;
@@ -2245,6 +2292,30 @@ template {
   .catalog-slider-wrap {
     width: 39.375rem;
   }
+
+  .card {
+    width: 37.5rem;
+  }
+
+  .full-img {
+    width: 43.75rem;
+    height: 43.75rem;
+  }
+
+  .full-img img {
+    width: 43.75rem;
+    height: 43.75rem;
+  }
+
+  .full-img-close {
+    right: -1.875rem;
+    top: -0.25rem;
+  }
+
+  .full-img-close::before,
+  .full-img-close::after {
+    background-color: #fff;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -2256,6 +2327,130 @@ template {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 54.375rem;
+    min-height: 43.9375rem;
+    flex-direction: row;
+    width: 54.375rem;
+    justify-content: space-between;
+    padding: 1.25rem 0 0 0;
+  }
+
+  .card .logo {
+    display: block;
+    width: 13rem;
+  }
+
+  .card .logo__title {
+    font-size: 6rem;
+  }
+
+  .card .logo__subtitle {
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .card .logo img {
+    right: 0;
+    top: 5.625rem;
+    width: 5.625rem;
+    height: 3.4375rem;
+  }
+
+  .card .left-col,
+  .card .right-col {
+    width: 50%;
+  }
+
+  .card .right-col {
+    order: 0;
+  }
+
+  .card .left-col__inner {
+    padding-left: 3.8125rem;
+  }
+
+  .card .toy-title {
+    margin: 4.125rem 4.375rem 4.25rem 0;
+    font-size: 1.875rem;
+  }
+
+  .card .images-wrap {
+    display: block;
+  }
+
+  .card .img-list {
+    order: 1;
+    flex-direction: row;
+  }
+
+  .card .img__item img {
+    width: 4.0625rem;
+    height: 4.0625rem;
+  }
+
+  .card .img__item {
+    width: 4.0625rem;
+    height: 4.0625rem;
+  }
+
+  .card .img__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 2.375rem;
+  }
+
+  .card .img__item-big img {
+    width: 20.8125rem;
+    height: 19.4375rem;
+  }
+
+  .card .img__item-big {
+    width: 20.8125rem;
+    height: 19.4375rem;
+    margin-bottom: 3.1875rem;
+  }
+
+  .card .to-catalog-btn,
+  .card .to-cart-btn {
+    font-size: 1.25rem;
+  }
+
+  .card .toy-info {
+    width: 19.5rem;
+    margin: 6rem 0 2.125rem 0;
+  }
+
+  .card .toy-description {
+    display: block;
+    width: 20.1875rem;
+    margin-bottom: 1.25rem;
+    font-family: "Montserrat-Regular";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 96%;
+    color: #000;
+  }
+
+  .card .price-block {
+    margin-bottom: 0;
+  }
+
+  .card .toy-count {
+    margin: 1.75rem 3.8125rem 1.25rem 0;
+  }
+
+  .card .price {
+    font-size: 1.75rem;
+  }
+
+  .full-img-close::before,
+  .full-img-close::after {
+    background-color: #000;
   }
 }
 
@@ -2592,6 +2787,10 @@ template {
   .catalog-slider .catalog-slide .to-cart-btn {
     font-size: 1.25rem;
   }
+
+  .overlay {
+    top: 2.75rem;
+  }
 }
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (min-resolution: 192dpi) {
@@ -2696,6 +2895,11 @@ template {
   .bisquit-content-4 {
     top: 46.8125rem;
     right: 37.5625rem;
+  }
+
+  .catalog-slider-main-wrap .next,
+  .catalog-slider-main-wrap .prev {
+    top: 55%;
   }
 
   .catalog-slider-main-wrap .next {
@@ -3012,6 +3216,10 @@ template {
   .catalog-slider .catalog-slide__title {
     margin-bottom: 5.4375rem;
   }
+
+  .overlay {
+    top: 3.25rem;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -3106,6 +3314,21 @@ template {
     margin-top: -7.5rem;
     width: 33.125rem;
     height: 24.875rem;
+  }
+
+  .full-img {
+    width: 56.25rem;
+    height: 56.25rem;
+  }
+
+  .full-img img {
+    width: 56.25rem;
+    height: 56.25rem;
+  }
+
+  .full-img-close::before,
+  .full-img-close::after {
+    background-color: #fff;
   }
 }
 

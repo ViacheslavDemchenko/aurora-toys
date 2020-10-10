@@ -114,10 +114,13 @@ var toys = {
     price: '1000 ₽',
     img_1_sm: 'img/card-lama-sm@2x.jpg',
     img_2_sm: 'img/card-lama-sm-2@2x.jpg',
+    img_3_sm: 'img/card-lama-sm-3@2x.jpg',
     img_1_big: 'img/card-lama-big@2x.jpg',
     img_2_big: 'img/card-lama-big-2@2x.jpg',
+    img_3_big: 'img/card-lama-big-3@2x.jpg',
     img_1_full: 'img/card-lama-full@2x.jpg',
-    img_2_full: 'img/card-lama-full-2@2x.jpg'
+    img_2_full: 'img/card-lama-full-2@2x.jpg',
+    img_3_full: 'img/card-lama-full-3@2x.jpg'
   },
   seal: {
     name: 'Белый тюлень',
@@ -129,10 +132,13 @@ var toys = {
     price: '1200 ₽',
     img_1_sm: 'img/card-seal-sm@2x.jpg',
     img_2_sm: 'img/card-seal-sm-2@2x.jpg',
+    img_3_sm: 'img/card-seal-sm-3@2x.jpg',
     img_1_big: 'img/card-seal-big@2x.jpg',
     img_2_big: 'img/card-seal-big-2@2x.jpg',
+    img_3_big: 'img/card-seal-big-3@2x.jpg',
     img_1_full: 'img/card-seal-full@2x.jpg',
-    img_2_full: 'img/card-seal-full-2@2x.jpg'
+    img_2_full: 'img/card-seal-full-2@2x.jpg',
+    img_3_full: 'img/card-seal-full-3@2x.jpg'
   }
 };
 var attr;
