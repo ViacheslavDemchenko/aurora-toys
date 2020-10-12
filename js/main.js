@@ -214,13 +214,16 @@ var formBack = document.querySelector('.form__back');
 var form = document.querySelector('.form');
 var overlay = document.querySelector('.overlay');
 var cartBtn = document.querySelector('.cart-btn');
+var body = document.getElementsByTagName('body')[0];
 cartBtn.addEventListener('click', function () {
   overlay.classList.add('overlay--active');
   form.classList.add('overlay--active');
+  body.classList.add('no-scroll');
 });
 formBack.addEventListener('click', function () {
   overlay.classList.remove('overlay--active');
   form.classList.remove('overlay--active');
+  body.classList.remove('no-scroll');
 });
 "use strict";
 
