@@ -12,14 +12,20 @@ cardDetails.forEach(function (btn) {
     body.classList.add('no-scroll');
   });
 });
-cardClose.addEventListener('click', function () {
-  overlay.classList.remove('overlay--active');
-  body.classList.remove('no-scroll');
-});
-toCatalogBtn.addEventListener('click', function () {
-  overlay.classList.remove('overlay--active');
-  body.classList.remove('no-scroll');
-});
+
+if ($('.card-close').length > 0) {
+  cardClose.addEventListener('click', function () {
+    overlay.classList.remove('overlay--active');
+    body.classList.remove('no-scroll');
+  });
+}
+
+if ($('.to-catalog-btn').length > 0) {
+  toCatalogBtn.addEventListener('click', function () {
+    overlay.classList.remove('overlay--active');
+    body.classList.remove('no-scroll');
+  });
+}
 
 function backToTop() {
   if (window.pageYOffset > 0) {
@@ -186,19 +192,35 @@ function dataFill() {
   });
 }
 
-var fullImgClose = document.querySelector('.full-img-close');
-var fullImg = document.querySelector('.full-img');
-fullImgClose.addEventListener('click', function () {
-  fullImg.classList.remove('full-img--active');
+if ($('.full-img-close').length > 0) {
+  var fullImgClose = document.querySelector('.full-img-close');
+  var fullImg = document.querySelector('.full-img');
+  fullImgClose.addEventListener('click', function () {
+    fullImg.classList.remove('full-img--active');
+  });
+  var imgBig = document.querySelector('.img__item-big img');
+  imgBig.addEventListener('click', function () {
+    var link = imgBig.getAttribute('src');
+    var newnewLink = link.replace(/big/i, 'full');
+    console.log(link);
+    console.log(newnewLink);
+    document.querySelector('.full-img img').setAttribute('src', newnewLink);
+    fullImg.classList.add('full-img--active');
+  });
+}
+"use strict";
+
+var formBack = document.querySelector('.form__back');
+var form = document.querySelector('.form');
+var overlay = document.querySelector('.overlay');
+var cartBtn = document.querySelector('.cart-btn');
+cartBtn.addEventListener('click', function () {
+  overlay.classList.add('overlay--active');
+  form.classList.add('overlay--active');
 });
-var imgBig = document.querySelector('.img__item-big img');
-imgBig.addEventListener('click', function () {
-  var link = imgBig.getAttribute('src');
-  var newnewLink = link.replace(/big/i, 'full');
-  console.log(link);
-  console.log(newnewLink);
-  document.querySelector('.full-img img').setAttribute('src', newnewLink);
-  fullImg.classList.add('full-img--active');
+formBack.addEventListener('click', function () {
+  overlay.classList.remove('overlay--active');
+  form.classList.remove('overlay--active');
 });
 "use strict";
 

@@ -108,7 +108,45 @@
           <div class="cart-btn">Оформить заказ</div>
         </div>
       </header>
+      <div class="overlay">
+        <form class="form">
+          <div class="form__back">Назад
+            <svg width="26" height="15">
+              <use xlink:href="img/icons/sprite.svg#left-arrow"></use>
+            </svg>
+          </div>
+          <div class="form__title">Заполните  форму для связи, чтобы мы могли с вами связаться!</div>
+          <div class="inputs-block">
+            <div class="input-block">
+              <label for="name">ФИО</label>
+              <input type="text" name="name" id="name">
+            </div>
+            <div class="input-block">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="input-block">
+              <label for="phone">Номер телефона </label>
+              <input type="text" name="phone" id="phone">
+            </div>
+            <div class="input-block">
+              <label for="city">Населенный пункт</label>
+              <input type="text" name="city" id="city">
+            </div>
+            <div class="input-block">
+              <label for="address">Адрес (улица, дом, квартира)</label>
+              <input type="text" name="address" id="address">
+            </div>
+            <div class="input-block">
+              <label for="index">Почтовый индекс</label>
+              <input type="text" name="index" id="index">
+            </div>
+            <input type="submit" id="form-submit" value="Заказать">
+          </div>
+        </form>
+      </div>
     </div>
+    <script src="js/jquery-3.5.1.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
