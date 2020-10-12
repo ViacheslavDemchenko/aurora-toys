@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="icon" href="#!" type="image/x-icon">
+    <link rel="shortcut icon" href="#!" type="image/x-icon">
+    <link rel="apple-touch-icon" href="#!"><!--[if lte IE 10]>
+    <p class="browser-upgrade">Вы используете устаревшую версию браузера. Пожалуйста </p><a class="browser-upgrade__link" href="http://browsehappy.com/">обновите свой браузер</a><![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="header header-cart">
+        <div class="header__inner">
+          <div class="top-menu">
+            <ul class="menu-list">
+              <li class="menu__item"><a class="menu__link menu__link--active" href="index.html">Главная</a></li>
+              <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог</a></li>
+            </ul><a class="phone" href="tel:+79155612976">+7 (915) 561-29-76
+              <svg width="30" height="35">
+                <use xlink:href="img/icons/sprite.svg#phone"> </use>
+              </svg></a>
+          </div><a class="cart-link" href="#">
+            <svg class="cart" width="33" height="35">
+              <use xlink:href="img/icons/sprite.svg#cart"></use>
+            </svg></a>
+          <div class="header-content">
+            <div class="logo">
+              <div class="logo__title">Aurora Toys</div>
+              <div class="logo__subtitle">Доставка по всей России</div><img src="img/sun.svg" width="90" height="55" alt="Логотип">
+            </div>
+          </div>
+        </div><a class="back-arrow" href="catalog.html">Назад
+          <svg width="16" height="16">
+            <use xlink:href="img/icons/sprite.svg#back-arrow"></use>
+          </svg></a>
+        <div class="cart-table">
+          <div class="cart__title">Ваша корзина</div>
+          <div class="cart-list">
+            <div class="cart__item">
+              <input class="checkbox-1" type="checkbox" id="checkbox-1">
+              <label for="checkbox-1"></label>
+              <div class="toy__img">
+                <picture>
+                  <source srcset="img/cart-lama@1x.webp, img/cart-lama@2x.webp 2x" type="image/webp">
+                  <source srcset="img/cart-lama@1x.jpg, img/cart-lama@2x.jpg 2x" type="image/png"><img src="img/cart-lama@1x.jpg" srcset="img/cart-lama@2x.jpg" width="140" height="140" alt="Игрушка радужная лама">
+                </picture>
+              </div>
+              <div class="toy__name">Радужная лама</div>
+              <div class="toy-count">
+                <div class="toy-count-arrows">
+                  <div class="count__arrow-left">&#60;</div>
+                  <div class="count__arrow-right">&#62;</div>
+                </div>
+                <div class="count__number">1</div>
+              </div>
+              <div class="toy__price">1000 ₽</div>
+            </div>
+            <div class="cart__item">
+              <input class="checkbox-2" type="checkbox" id="checkbox-2">
+              <label for="checkbox-2"></label>
+              <div class="toy__img">
+                <picture>
+                  <source srcset="img/cart-lama@1x.webp, img/cart-lama@2x.webp 2x" type="image/webp">
+                  <source srcset="img/cart-lama@1x.jpg, img/cart-lama@2x.jpg 2x" type="image/png"><img src="img/cart-lama@1x.jpg" srcset="img/cart-lama@2x.jpg" width="140" height="140" alt="Игрушка радужная лама">
+                </picture>
+              </div>
+              <div class="toy__name">Радужная лама</div>
+              <div class="toy-count">
+                <div class="toy-count-arrows">
+                  <div class="count__arrow-left">&#60;</div>
+                  <div class="count__arrow-right">&#62;</div>
+                </div>
+                <div class="count__number">1</div>
+              </div>
+              <div class="toy__price">1000 ₽</div>
+            </div>
+            <div class="cart__item">
+              <input class="checkbox-3" type="checkbox" id="checkbox-3">
+              <label for="checkbox-3"></label>
+              <div class="toy__img">
+                <picture>
+                  <source srcset="img/cart-lama@1x.webp, img/cart-lama@2x.webp 2x" type="image/webp">
+                  <source srcset="img/cart-lama@1x.jpg, img/cart-lama@2x.jpg 2x" type="image/png"><img src="img/cart-lama@1x.jpg" srcset="img/cart-lama@2x.jpg" width="140" height="140" alt="Игрушка радужная лама">
+                </picture>
+              </div>
+              <div class="toy__name">Радужная лама</div>
+              <div class="toy-count">
+                <div class="toy-count-arrows">
+                  <div class="count__arrow-left">&#60;</div>
+                  <div class="count__arrow-right">&#62;</div>
+                </div>
+                <div class="count__number">1</div>
+              </div>
+              <div class="toy__price">1000 ₽</div>
+            </div>
+          </div>
+          <div class="cart-total">
+            <div class="total__title">Итого:</div>
+            <input class="total__num" type="text">
+          </div>
+          <div class="cart-btn">Оформить заказ</div>
+        </div>
+      </header>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
