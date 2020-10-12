@@ -215,6 +215,15 @@ var form = document.querySelector('.form');
 var overlay = document.querySelector('.overlay');
 var cartBtn = document.querySelector('.cart-btn');
 var body = document.getElementsByTagName('body')[0];
+
+function backToTop() {
+  if (window.pageYOffset > 0) {
+    window.scrollBy(0, -80);
+    setTimeout(backToTop, 0);
+  }
+}
+
+cartBtn.addEventListener('click', backToTop);
 cartBtn.addEventListener('click', function () {
   overlay.classList.add('overlay--active');
   form.classList.add('overlay--active');
