@@ -953,10 +953,6 @@ template {
   display: none;
 }
 
-.header-catalog {
-  height: 1000px;
-}
-
 .header-cart .logo {
   margin-bottom: 1.25rem;
 }
@@ -2109,6 +2105,7 @@ template {
 .total__num {
   width: 12.5rem;
   padding: 0.9375rem 1.875rem;
+  text-align: center;
   border: 0.0625rem solid rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
   border-radius: 0.625rem;
@@ -3519,10 +3516,12 @@ template {
   }
 
   .toy__name {
+    width: 18.75rem;
     font-size: 2.3125rem;
   }
 
   .toy__price {
+    width: 7.5rem;
     font-size: 1.9375rem;
   }
 
@@ -3555,7 +3554,6 @@ template {
 
   .total__num {
     width: 19.125rem;
-    padding: 1.3125rem 5.375rem;
   }
 
   .cart-btn {
