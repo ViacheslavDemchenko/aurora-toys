@@ -1,13 +1,31 @@
+// window.onload = function () {
+//     localStorage.clear();
+//   }
+"use strict";
 "use strict";
 
-var url = document.location.href;
-$.each($('.menu__link'), function () {
-  if (this.href == url) {
-    $(this).addClass('menu__link--active');
-  } else {
-    $('.menu__link').removeClass('menu__link--active');
-  }
-});
+// let url = document.location.href;
+// $.each($('.menu__link'), function() {
+//     if (this.href == url) { 
+//         $(this).addClass('menu__link--active');
+//     } else {
+//         $('.menu__link').removeClass('menu__link--active');
+//     }
+// });
+if (localStorage.getItem('toyNumber') !== null) {
+  var toySum = localStorage.getItem('toyNumber');
+  var cartToyNumber = document.querySelector('.cart__num');
+  cartToyNumber.textContent = toySum;
+}
+// let toysObj = localStorage.getItem('cart');
+// let toysNum = JSON.parse(toysObj);
+// const cartToyNumber = document.querySelector('.cart__num');
+// for (let toy in toysNum) {
+//     let num = (toysNum[toy]);
+//     console.log(num);
+//     cartToyNumber.textContent = num;
+// }
+"use strict";
 "use strict";
 
 /*!
