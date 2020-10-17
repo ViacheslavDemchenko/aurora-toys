@@ -10,16 +10,16 @@ function backToTop() {
     }
 }
 
-if ($('.cart-btn').length > 0) {
+// if ($('.cart-btn').length > 0) {
 
-    cartBtn.addEventListener('click',backToTop);
+//     cartBtn.addEventListener('click',backToTop);
 
-    cartBtn.addEventListener('click', () => {
-        overlay.classList.add('overlay--active');
-        form.classList.add('overlay--active');
-        body.classList.add('no-scroll');
-    });
-}
+//     cartBtn.addEventListener('click', () => {
+//         overlay.classList.add('overlay--active');
+//         form.classList.add('overlay--active');
+//         body.classList.add('no-scroll');
+//     });
+// }
 
 if ($('.form__back').length > 0) {
 
@@ -174,6 +174,33 @@ toys = {
 
 let getStorageCart = localStorage.getItem('cart');
 let cartObject = JSON.parse(getStorageCart);
+
+function cartTitle(obj) {
+    const cartTitle = document.querySelector('.cart__title');
+
+    if (Object.keys(obj).length === 0) {
+        cartTitle.textContent = 'Ваша корзина пуста';
+        cartBtn.textContent = 'Каталог';
+        cartBtn.addEventListener('click', () => {
+            window.location.href = 'catalog.html';
+            overlay.classList.remove('overlay--active');
+            form.classList.remove('overlay--active');
+            body.classList.remove('no-scroll');
+        });
+    } else {
+        cartTitle.textContent = 'Ваша корзина';
+        cartBtn.textContent = 'Оформить товар';
+        cartBtn.setAttribute('href', '#');
+        cartBtn.addEventListener('click',backToTop);
+        cartBtn.addEventListener('click', () => {
+            overlay.classList.add('overlay--active');
+            form.classList.add('overlay--active');
+            body.classList.add('no-scroll');
+        });
+    }
+}
+cartTitle(cartObject);
+
 let total = +localStorage.getItem('totalPrice');
 const totalSum = document.querySelector('.total__num');
 totalSum.value = `${total} ₽`;
@@ -354,6 +381,7 @@ deleteToy.forEach( del => {
         cartToyNumber.textContent = toySum;
         let toyList = document.querySelector('.cart-list');
         toyList.removeChild(item);
+        cartTitle(currentCart);
     });
 });
 
