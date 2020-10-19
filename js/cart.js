@@ -50,6 +50,9 @@ toys = {
         img_1_full: 'img/card-shark-full@2x.jpg',
         img_2_full: 'img/card-shark-full-2@2x.jpg',
         img_3_full: 'img/card-shark-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-shark-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-shark-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-shark-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-shark@1x.jpg',
         img_cart_2x_jpg: 'img/cart-shark@2x.jpg',
         img_cart_1x_webp: 'img/cart-shark@1x.webp',
@@ -73,6 +76,9 @@ toys = {
         img_1_full: 'img/card-avocado-full@2x.jpg',
         img_2_full: 'img/card-avocado-full-2@2x.jpg',
         img_3_full: 'img/card-avocado-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-avocado-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-avocado-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-avocado-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-avocado@1x.jpg',
         img_cart_2x_jpg: 'img/cart-avocado@2x.jpg',
         img_cart_1x_webp: 'img/cart-avocado@1x.webp',
@@ -96,6 +102,9 @@ toys = {
         img_1_full: 'img/card-corgi-full@2x.jpg',
         img_2_full: 'img/card-corgi-full-2@2x.jpg',
         img_3_full: 'img/card-corgi-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-corgi-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-corgi-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-corgi-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-corgi@1x.jpg',
         img_cart_2x_jpg: 'img/cart-corgi@2x.jpg',
         img_cart_1x_webp: 'img/cart-corgi@1x.webp',
@@ -119,6 +128,9 @@ toys = {
         img_1_full: 'img/card-cat-full@2x.jpg',
         img_2_full: 'img/card-cat-full-2@2x.jpg',
         img_3_full: 'img/card-cat-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-cat-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-cat-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-cat-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-cat@1x.jpg',
         img_cart_2x_jpg: 'img/cart-cat@2x.jpg',
         img_cart_1x_webp: 'img/cart-cat@1x.webp',
@@ -142,6 +154,9 @@ toys = {
         img_1_full: 'img/card-lama-full@2x.jpg',
         img_2_full: 'img/card-lama-full-2@2x.jpg',
         img_3_full: 'img/card-lama-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-lama-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-lama-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-lama-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-lama@1x.jpg',
         img_cart_2x_jpg: 'img/cart-lama@2x.jpg',
         img_cart_1x_webp: 'img/cart-lama@1x.webp',
@@ -165,6 +180,9 @@ toys = {
         img_1_full: 'img/card-seal-full@2x.jpg',
         img_2_full: 'img/card-seal-full-2@2x.jpg',
         img_3_full: 'img/card-seal-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-seal-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-seal-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-seal-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-seal@1x.jpg',
         img_cart_2x_jpg: 'img/cart-seal@2x.jpg',
         img_cart_1x_webp: 'img/cart-seal@1x.webp',
@@ -203,6 +221,7 @@ cartTitle(cartObject);
 
 let total = +localStorage.getItem('totalPrice');
 const totalSum = document.querySelector('.total__num');
+totalSum.disabled = true;
 totalSum.value = `${total} ₽`;
 
 
@@ -252,9 +271,7 @@ const toyPlus = document.querySelectorAll('.cart-right');
 toyPlus.forEach( plus => {
     plus.addEventListener('click', () => {
         let toy = plus.closest('.cart__item');
-        let checkBox = toy.querySelector('.checkbox');
 
-        if (checkBox.checked) {
             let number = toy.querySelector('.count__number');
             let count = number.textContent;
             count++;
@@ -292,16 +309,13 @@ toyPlus.forEach( plus => {
             toyPriceNum = toys[toyName].price.slice(0, -2);
             toyPrice.textContent = toyPriceNum * count + ' ₽';
             newTotalPrice();
-        }
     });
 });
 
 toyMinus.forEach( plus => {
     plus.addEventListener('click', () => {
         let toy = plus.closest('.cart__item');
-        let checkBox = toy.querySelector('.checkbox');
 
-        if (checkBox.checked) {
             let number = toy.querySelector('.count__number');
             let count = number.textContent;
             count--;
@@ -344,7 +358,6 @@ toyMinus.forEach( plus => {
             toyPriceNum = toys[toyName].price.slice(0, -2);
             toyPrice.textContent = toyPriceNum * count + ' ₽';
             newTotalPrice();
-        } 
     });
 });
 
@@ -385,54 +398,6 @@ deleteToy.forEach( del => {
     });
 });
 
-// function checkBox() {
-//     const checkBoxes = document.querySelectorAll('.cart__item input');
-//     checkBoxes.forEach( (input, index) => {
-
-//         input.addEventListener('change', () => {
-//             let item = input.closest('.cart__item');
-//             let itemPrice = +item.querySelector('.toy__price').textContent;
-//             let attr = item.getAttribute('data-name');
-//             let getCurrentCart = localStorage.getItem('cart');
-//             let currentCart = JSON.parse(getCurrentCart);
-//             console.log(attr);
-//             console.log(currentCart[attr]);
-
-//             if (input.checked) {
-//                 // let item = input.closest('.cart__item');
-//                 // let itemPrice = +item.querySelector('.toy__price').textContent;
-
-//                 // console.log(itemPrice);
-//                 totalSum.value = +totalSum.value.replace(/ ₽/i, '');
-//                 let newTotal = +totalSum.value;
-//                 newTotal += itemPrice;
-//                 totalSum.value = `${newTotal} ₽`;
-//                 console.log(total);
-//             } else {
-//                 console.log(attr);
-//                 delete currentCart[attr];
-//                 console.log(currentCart);
-//                 localStorage.setItem('cart', JSON.stringify(currentCart));
-//                 // let item = input.closest('.cart__item');
-//                 // let itemPrice = +item.querySelector('.toy__price').textContent;
-//                 console.log(itemPrice);
-
-//                 totalSum.value = +totalSum.value.replace(/ ₽/i, '');
-//                 let newTotal = +totalSum.value;
-//                 newTotal -= itemPrice;
-//                 totalSum.value = `${newTotal} ₽`;
-//                 let toy = input.closest('.cart__item');
-//                 let toyPrice = toy.querySelector('.toy__price');
-//                 let toyNum = toy.querySelector('.count__number');
-//                 toyPrice.textContent = 0;
-//                 toyNum.textContent = 0;
-//             }
-//         });
-//     });
-// }
-// checkBox();
-
-
 function toyNumChange() {
     const cartToyNumber = document.querySelector('.cart__num');
     if (localStorage.getItem('toyNumber') !== null) {
@@ -445,6 +410,3 @@ function toyNumChange() {
 toyNumChange();
 
 
-
-// <input type="checkbox" id="checkbox-${count}" class="checkbox checkbox-${count}" checked>
-// <label for="checkbox-${count}"></label>

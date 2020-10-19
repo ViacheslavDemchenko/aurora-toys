@@ -2083,6 +2083,7 @@ template {
   font-size: 1.375rem;
   line-height: 50%;
   color: #000000;
+  background: #fff;
 }
 
 .cart-btn {

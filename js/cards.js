@@ -66,6 +66,9 @@ let toys = {
         img_1_full: 'img/card-shark-full@2x.jpg',
         img_2_full: 'img/card-shark-full-2@2x.jpg',
         img_3_full: 'img/card-shark-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-shark-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-shark-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-shark-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-shark@1x.jpg',
         img_cart_2x_jpg: 'img/cart-shark@2x.jpg',
         img_cart_1x_webp: 'img/cart-shark@1x.webp',
@@ -89,6 +92,9 @@ let toys = {
         img_1_full: 'img/card-avocado-full@2x.jpg',
         img_2_full: 'img/card-avocado-full-2@2x.jpg',
         img_3_full: 'img/card-avocado-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-avocado-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-avocado-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-avocado-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-avocado@1x.jpg',
         img_cart_2x_jpg: 'img/cart-avocado@2x.jpg',
         img_cart_1x_webp: 'img/cart-avocado@1x.webp',
@@ -112,6 +118,9 @@ let toys = {
         img_1_full: 'img/card-corgi-full@2x.jpg',
         img_2_full: 'img/card-corgi-full-2@2x.jpg',
         img_3_full: 'img/card-corgi-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-corgi-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-corgi-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-corgi-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-corgi@1x.jpg',
         img_cart_2x_jpg: 'img/cart-corgi@2x.jpg',
         img_cart_1x_webp: 'img/cart-corgi@1x.webp',
@@ -135,6 +144,9 @@ let toys = {
         img_1_full: 'img/card-cat-full@2x.jpg',
         img_2_full: 'img/card-cat-full-2@2x.jpg',
         img_3_full: 'img/card-cat-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-cat-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-cat-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-cat-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-cat@1x.jpg',
         img_cart_2x_jpg: 'img/cart-cat@2x.jpg',
         img_cart_1x_webp: 'img/cart-cat@1x.webp',
@@ -158,6 +170,9 @@ let toys = {
         img_1_full: 'img/card-lama-full@2x.jpg',
         img_2_full: 'img/card-lama-full-2@2x.jpg',
         img_3_full: 'img/card-lama-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-lama-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-lama-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-lama-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-lama@1x.jpg',
         img_cart_2x_jpg: 'img/cart-lama@2x.jpg',
         img_cart_1x_webp: 'img/cart-lama@1x.webp',
@@ -181,6 +196,9 @@ let toys = {
         img_1_full: 'img/card-seal-full@2x.jpg',
         img_2_full: 'img/card-seal-full-2@2x.jpg',
         img_3_full: 'img/card-seal-full-3@2x.jpg',
+        img_1_full_mobile: 'img/card-seal-full-mobile@2x.jpg',
+        img_2_full_mobile: 'img/card-seal-full-mobile-2@2x.jpg',
+        img_3_full_mobile: 'img/card-seal-full-mobile-3@2x.jpg',
         img_cart_1x_jpg: 'img/cart-seal@1x.jpg',
         img_cart_2x_jpg: 'img/cart-seal@2x.jpg',
         img_cart_1x_webp: 'img/cart-seal@1x.webp',
@@ -225,7 +243,7 @@ function dataFill() {
 
     document.querySelector('.card').setAttribute('data-card', currentToy.nameEn);
 
-    images.forEach( (img, index) => {
+    images.forEach( img => {
         img.addEventListener('mouseenter', () => {
             let link = img.getAttribute('src');
             let newnewLink = link.replace(/sm/i, 'big');
@@ -248,7 +266,14 @@ if ($('.full-img-close').length > 0) {
 
     imgBig.addEventListener('click', () => {
         let link = imgBig.getAttribute('src');
-        let newnewLink = link.replace(/big/i, 'full');
+        let newnewLink;
+
+        if (window.screen.width <= 1024 ) {
+            newnewLink = link.replace(/big/i, 'full-mobile');
+        } else {
+            newnewLink = link.replace(/big/i, 'full');
+        }
+
         console.log(link);
         console.log(newnewLink);
         document.querySelector('.full-img img').setAttribute('src', newnewLink);
