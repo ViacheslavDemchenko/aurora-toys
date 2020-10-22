@@ -2285,6 +2285,7 @@ template {
 
 .cart-list .toy-color {
   display: flex;
+  margin-top: 1.25rem;
 }
 
 .cart-list .col,
@@ -2964,6 +2965,11 @@ template {
     width: 12.5rem;
     height: 4.375rem;
     font-size: 1.125rem;
+  }
+
+  .cart-list .toy-color {
+    margin-top: 0;
+    margin-right: 1.25rem;
   }
 }
 

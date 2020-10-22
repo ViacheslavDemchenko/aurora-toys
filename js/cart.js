@@ -392,41 +392,51 @@ function cartShow(obj) {
 
     if (localStorage.getItem('color-corgi') != null) {
         let corgiColor = localStorage.getItem('color-corgi');
-        // console.log(corgiColor);
+        console.log(corgiColor);
 
         if (corgiColor == 'серый') {
             console.log('серый');
-            const col_1 = document.querySelector('.col_1');
-            col_1.classList.add('col--active');
+            if ($('.col_1').length > 0) {
+                const col_1 = document.querySelector('.col_1');
+                col_1.classList.add('col--active');
+            }
         }
         
         if (corgiColor == 'желтый') {
             console.log('желтый');
-            const col_2 = document.querySelector('.col_2');
-            col_2.classList.add('col--active');
+            if ($('.col_2').length > 0) {
+                const col_2 = document.querySelector('.col_2');
+                col_2.classList.add('col--active');
+            }
         } 
         
         if (corgiColor == 'коричневый') {
             console.log('коричневый');
-            const col_3 = document.querySelector('.col_3');
-            col_3.classList.add('col--active');
+            if ($('.col_3').length > 0) {
+                const col_3 = document.querySelector('.col_3');
+                col_3.classList.add('col--active');
+            }
         }
     }
 
     if (localStorage.getItem('color-cat') !== null) {
         let catColor = localStorage.getItem('color-cat');
-        // console.log(catColor);
+        console.log(catColor);
 
         if (catColor == 'серый') {
             console.log('серый');
-            const cols_1 = document.querySelector('.cols_1');
-            cols_1.classList.add('col--active');
+            if ($('.cols_1').length > 0) {
+                const cols_1 = document.querySelector('.cols_1');
+                cols_1.classList.add('cols--active');
+            }
         } 
         
         if (catColor == 'желтый') {
             console.log('желтый');
-            const cols_2 = document.querySelector('.cols_2');
-            cols_2.classList.add('col--active');
+            if ($('.cols_2').length > 0) {
+                const cols_2 = document.querySelector('.cols_2');
+                cols_2.classList.add('cols--active');
+            }
         } 
     }
 }
@@ -562,6 +572,16 @@ deleteToy.forEach( del => {
         let toyList = document.querySelector('.cart-list');
         toyList.removeChild(item);
         cartTitle(currentCart);
+
+        if (attr == 'corgi') {
+            console.log('корги');
+            localStorage.removeItem('corgi-color');
+        }
+
+        if (attr == 'cat') {
+            console.log('кот');
+            localStorage.removeItem('cat-color');
+        }
     });
 });
 
@@ -672,26 +692,6 @@ function getChar(event) {
 const successBlock = document.querySelector('.success');
 const overlaySuccess = document.querySelector('.overlay-success');
 
-$(".form").submit(function() { 
-    var th = $(this);
-    $.ajax({
-        type: "POST",
-        url: "http://dvv1979.beget.tech/mail.php", 
-        data: th.serialize()
-    }).done(function() {
-    setTimeout(function() {
-        th.trigger("reset");
-        overlay.classList.remove('overlay--active');
-        form.classList.remove('overlay--active');
-        overlaySuccess.classList.add('overlay--active');
-        successBlock.classList.add('overlay--active');
-        localStorage.clear();
-        }, 1000);
-    });
-    return false;
-});
-
-
 const col = document.querySelectorAll('.col');
 const cols = document.querySelectorAll('.cols');
 
@@ -711,12 +711,31 @@ col.forEach(color => {
 cols.forEach(color => {
     color.addEventListener('click', () => {
         cols.forEach(color => {
-            color.classList.remove('col--active');
+            color.classList.remove('cols--active');
         });
-        color.classList.add('col--active');
+        color.classList.add('cols--active');
         let currentColor = color.getAttribute('data-color');
         localStorage.setItem('color-cat', currentColor);
         console.log(currentColor);
         toysFormFill(cartObject);
     });
+});
+
+$(".form").submit(function() { 
+    var th = $(this);
+    $.ajax({
+        type: "POST",
+        url: "http://dvv1979.beget.tech/mail.php", 
+        data: th.serialize()
+    }).done(function() {
+    setTimeout(function() {
+        th.trigger("reset");
+        overlay.classList.remove('overlay--active');
+        form.classList.remove('overlay--active');
+        overlaySuccess.classList.add('overlay--active');
+        successBlock.classList.add('overlay--active');
+        localStorage.clear();
+        }, 1000);
+    });
+    return false;
 });
