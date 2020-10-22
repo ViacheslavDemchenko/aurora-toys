@@ -1152,12 +1152,6 @@ template {
   color: #C6000C;
 }
 
-.form .input-hidden {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-}
-
 .success {
   position: absolute;
   z-index: 5000;

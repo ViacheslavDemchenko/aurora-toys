@@ -704,6 +704,7 @@ col.forEach(color => {
         let currentColor = color.getAttribute('data-color');
         localStorage.setItem('color-corgi', currentColor);
         console.log(currentColor);
+        toysFormFill(cartObject);
     });
 });
 
@@ -716,5 +717,6 @@ cols.forEach(color => {
         let currentColor = color.getAttribute('data-color');
         localStorage.setItem('color-cat', currentColor);
         console.log(currentColor);
+        toysFormFill(cartObject);
     });
 });
