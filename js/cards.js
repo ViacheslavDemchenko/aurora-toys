@@ -13,6 +13,16 @@ const card = document.querySelector('.card');
 const cardClose = document.querySelector('.card-close');
 const body = document.getElementsByTagName('body')[0];
 const toCatalogBtn = document.querySelector('.to-catalog-btn');
+const toyColor = document.querySelector('.toy-color');
+const corgiColors = document.querySelectorAll('.corgi-color');
+const corgiColor_1 = document.querySelector('.corgi-color_1');
+const corgiColor_2 = document.querySelector('.corgi-color_2');
+const corgiColor_3 = document.querySelector('.corgi-color_3');
+
+const catColors = document.querySelectorAll('.cat-color');
+const catColor_1 = document.querySelector('.cat-color_1');
+const catColor_2 = document.querySelector('.cat-color_2');
+
 
 cardDetails.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -26,6 +36,18 @@ if ($('.card-close').length > 0) {
     cardClose.addEventListener('click', () => {
         overlay.classList.remove('overlay--active');
         body.classList.remove('no-scroll');
+        toyColor.style.display = 'none';
+        corgiColor_1.style.display = 'none';
+        corgiColor_2.style.display = 'none';
+        corgiColor_3.style.display = 'none';
+        catColor_1.style.display = 'none';
+        catColor_2.style.display = 'none';
+        corgiColors.forEach(color => {
+            color.classList.remove('corgi-color--active');
+        });
+        catColors.forEach(color => {
+            color.classList.remove('cat-color--active');
+        });
     });
 }
 
@@ -46,6 +68,8 @@ function backToTop() {
 cardDetails.forEach((btn) => {
     btn.addEventListener('click', backToTop);
 });
+
+
 
 let toys = {
 	shark: {
@@ -243,6 +267,46 @@ function dataFill() {
 
     document.querySelector('.card').setAttribute('data-card', currentToy.nameEn);
 
+    if (currentToy.nameEn == 'corgi') {
+        console.log('Корги');
+        toyColor.style.display = 'flex';
+        corgiColor_1.style.display = 'flex';
+        corgiColor_2.style.display = 'flex';
+        corgiColor_3.style.display = 'flex';
+
+        corgiColors.forEach(color => {
+            color.addEventListener('click', () => {
+                corgiColors.forEach(color => {
+                    color.classList.remove('corgi-color--active');
+                });
+                color.classList.add('corgi-color--active');
+                let colorCorgi = color.getAttribute('data-color');
+                localStorage.setItem('color-corgi', colorCorgi);
+                console.log(localStorage.getItem('color-corgi'));
+            });
+        });
+    }
+
+    if (currentToy.nameEn == 'cat') {
+        console.log('Кот');
+        toyColor.style.display = 'flex';
+        catColor_1.style.display = 'flex';
+        catColor_2.style.display = 'flex';
+        // catColor_3.style.display = 'none';
+
+        catColors.forEach(color => {
+            color.addEventListener('click', () => {
+                catColors.forEach(color => {
+                    color.classList.remove('cat-color--active');
+                });
+                color.classList.add('cat-color--active');
+                let colorCat = color.getAttribute('data-color');
+                localStorage.setItem('color-cat', colorCat);
+                console.log(localStorage.getItem('color-cat'));
+            });
+        });
+    } 
+
     images.forEach( img => {
         img.addEventListener('mouseenter', () => {
             let link = img.getAttribute('src');
@@ -346,7 +410,7 @@ toCartBtn.forEach(btn => {
                 console.log(totalPrice);
                 totalPrice += price * card.querySelector('.count__number').textContent;
                 localStorage.setItem('totalPrice', totalPrice);
-                console.log(totalPrice);
+                console.log(currentCart);
             }
 
         } else {
@@ -355,7 +419,7 @@ toCartBtn.forEach(btn => {
             totalPrice += price * card.querySelector('.count__number').textContent;
             localStorage.setItem('cart', JSON.stringify(cart));
             localStorage.setItem('totalPrice', totalPrice);
-            console.log(cart);
+            console.log(cart[toy]);
         }
         toyNum();
     });
@@ -456,3 +520,18 @@ function sum(obj) {
 }
 
 
+// var friends = new Object();
+
+// friends.steve = new Object();
+// friends.steve.firstName = "Steve";
+// friends.steve.lastName = "Jobs";
+// friends.steve.number = "20-456-88";
+// friends.steve.address = "Apple";
+
+// friends.bill = new Object();
+// friends.bill.firstName = "Bill";
+// friends.bill.lastName = "gates";
+// friends.bill.number = "20-456-88";
+// friends.bill.address = "Windows";
+
+// console.log(friends);

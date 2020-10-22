@@ -1074,6 +1074,10 @@ template {
   font-weight: normal;
   font-style: normal;
   font-size: 1.125rem;
+  color: #00A689;
+}
+
+.form .inputs-block input[name="email"] {
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -1106,6 +1110,136 @@ template {
   font-size: 0.9375rem;
   line-height: 80%;
   color: #FFFFFF;
+}
+
+.form ::-webkit-input-placeholder {
+  font-family: "Montserrat-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  color: #C6000C;
+}
+
+.form :-ms-input-placeholder {
+  font-family: "Montserrat-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  color: #C6000C;
+}
+
+.form ::-moz-placeholder {
+  font-family: "Montserrat-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  color: #C6000C;
+}
+
+.form :-moz-placeholder {
+  font-family: "Montserrat-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  color: #C6000C;
+}
+
+.form .success-form {
+  color: #00A689 !important;
+}
+
+.form .fail-form {
+  color: #C6000C;
+}
+
+.form .input-hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.success {
+  position: absolute;
+  z-index: 5000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 18.75rem;
+  width: 18.75rem;
+  padding: 0.625rem;
+  background: #fff;
+}
+
+.success--active {
+  display: block;
+}
+
+.success__back {
+  position: relative;
+  left: 3.125rem;
+  display: inline-block;
+  width: 6.25rem;
+  font-family: "Montserrat-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 80%;
+  color: #000000;
+  cursor: pointer;
+}
+
+.success__back svg {
+  position: absolute;
+  top: 50%;
+  left: -2.5rem;
+  transform: translateY(-50%);
+}
+
+.success__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 15.625rem;
+  margin-left: 0.9375rem;
+  font-family: "Montserrat-SemiBold";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 112%;
+  text-align: center;
+  color: #000000;
+}
+
+.success__title::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -1.25rem;
+  transform: translate(-50%, -50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: #32BEA6;
+  background-image: url(../img/check-mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+
+.overlay-success {
+  display: none;
+  position: fixed;
+  z-index: 4000;
+  top: 2.25rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.84);
+}
+
+.overlay-success--active {
+  display: block;
 }
 
 /* BLOCKS */
@@ -1816,7 +1950,8 @@ template {
 
 .card .toy-size,
 .card .toy-material,
-.card .toy-wadding {
+.card .toy-wadding,
+.card .toy-color {
   display: flex;
   justify-content: space-between;
   font-family: "Montserrat-Regular";
@@ -1828,8 +1963,45 @@ template {
 }
 
 .card .toy-size,
-.card .toy-material {
+.card .toy-material,
+.card .toy-color {
   margin-bottom: 0.625rem;
+}
+
+.card .toy-color {
+  display: none;
+}
+
+.card .corgi-color,
+.card .cat-color {
+  width: 1.4375rem;
+  height: 1.4375rem;
+  margin-left: 0.625rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+}
+
+.card .corgi-color--active,
+.card .cat-color--active {
+  border: 0.0625rem solid #1A9435;
+}
+
+.card .corgi-color_1,
+.card .cat-color_1 {
+  display: none;
+  margin-left: auto;
+  background: #C4C4C4;
+}
+
+.card .corgi-color_2,
+.card .cat-color_2 {
+  display: none;
+  background: #F7A912;
+}
+
+.card .corgi-color_3 {
+  display: none;
+  background: #CC8646;
 }
 
 .card .toy-description {
@@ -2111,6 +2283,40 @@ template {
   cursor: pointer;
 }
 
+.cart-list .toy-color {
+  display: flex;
+}
+
+.cart-list .col,
+.cart-list .cols {
+  width: 1.4375rem;
+  height: 1.4375rem;
+  margin-left: 0.625rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+}
+
+.cart-list .col--active,
+.cart-list .cols--active {
+  border: 0.0625rem solid #1A9435;
+}
+
+.cart-list .col_1,
+.cart-list .cols_1 {
+  margin-left: auto;
+  background: #C4C4C4;
+}
+
+.cart-list .col_2,
+.cart-list .cols_2 {
+  background: #F7A912;
+}
+
+.cart-list .col_3,
+.cart-list .cols_3 {
+  background: #CC8646;
+}
+
 @media screen and (min-width: 320px) {
   .container-fluid {
     padding-left: 6px;
@@ -2321,6 +2527,21 @@ template {
 
   .form .inputs-block {
     width: 25rem;
+  }
+
+  .success {
+    width: 31.25rem;
+  }
+
+  .success__title {
+    width: 20.625rem;
+    margin-left: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .success__title::before {
+    width: 1.875rem;
+    height: 1.875rem;
   }
 
   .top-menu .menu__item {
@@ -3045,6 +3266,10 @@ template {
     height: 5.125rem;
   }
 
+  .overlay-success {
+    top: 2.8125rem;
+  }
+
   .top-menu .menu__link {
     font-size: 1.5rem;
   }
@@ -3290,6 +3515,11 @@ template {
     font-size: 1.25rem;
   }
 
+  .success {
+    width: 37.5rem;
+    min-height: 25rem;
+  }
+
   .main-slider {
     width: 50%;
     padding-top: 15.625rem;
@@ -3415,7 +3645,8 @@ template {
   }
 
   .card .toy-size,
-  .card .toy-material {
+  .card .toy-material,
+  .card .toy-color {
     margin-bottom: 1.3125rem;
   }
 
@@ -3854,6 +4085,52 @@ template {
     width: 11.4375rem;
     height: 4.4375rem;
     font-size: 1.5625rem;
+  }
+
+  .form ::-webkit-input-placeholder {
+    font-size: 1.5625rem;
+  }
+
+  .form :-ms-input-placeholder {
+    font-size: 1.5625rem;
+  }
+
+  .form ::-moz-placeholder {
+    font-size: 1.5625rem;
+  }
+
+  .form :-moz-placeholder {
+    font-size: 1.5625rem;
+  }
+
+  .success {
+    width: 54.375rem;
+    min-height: 43.9375rem;
+    padding: 3.125rem 5rem 3.125rem 5rem;
+  }
+
+  .success__back {
+    font-size: 1.5625rem;
+    width: 10rem;
+  }
+
+  .success__back svg {
+    left: -1.875rem;
+  }
+
+  .success__title {
+    width: 40.625rem;
+    margin-left: 2.5rem;
+    font-size: 1.75rem;
+  }
+
+  .success__title::before {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .overlay-success {
+    top: 3.25rem;
   }
 
   .tree {

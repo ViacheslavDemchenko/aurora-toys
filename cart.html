@@ -51,7 +51,7 @@
         </div>
       </header>
       <div class="overlay">
-        <form class="form" action="mail.php" method="post">
+        <form class="form" id="form" action="mail.php" method="post">
           <div class="form__back">Назад
             <svg width="26" height="15">
               <use xlink:href="img/icons/sprite.svg#left-arrow"></use>
@@ -61,31 +61,41 @@
           <div class="inputs-block">
             <div class="input-block">
               <label for="name">ФИО</label>
-              <input type="text" name="name" id="name">
+              <input type="text" name="name" id="name" placeholder="Укажите ваши данные*" required>
             </div>
             <div class="input-block">
               <label for="email">Email</label>
-              <input type="email" name="email" id="email">
+              <input class="email-field" type="email" name="email" id="email" placeholder="Укажите ваши данные*" required>
             </div>
             <div class="input-block">
               <label for="phone">Номер телефона </label>
-              <input type="text" name="phone" id="phone">
+              <input class="tel-field" type="text" name="phone" id="phone" placeholder="Укажите ваши данные*" required>
             </div>
             <div class="input-block">
               <label for="city">Населенный пункт</label>
-              <input type="text" name="city" id="city">
+              <input type="text" name="city" id="city" placeholder="Укажите ваши данные*" required>
             </div>
             <div class="input-block">
               <label for="address">Адрес (улица, дом, квартира)</label>
-              <input type="text" name="address" id="address">
+              <input type="text" name="address" id="address" placeholder="Укажите ваши данные*" required>
             </div>
             <div class="input-block">
               <label for="index">Почтовый индекс</label>
-              <input type="text" name="index" id="index">
+              <input type="text" name="index" id="index" placeholder="Укажите ваши данные*" maxlength="6" required>
             </div>
+            <div class="cart-blocks"></div>
             <input type="submit" id="form-submit" value="Заказать">
           </div>
         </form>
+      </div>
+      <div class="overlay-success">
+        <div class="success">
+          <div class="success__top"><a class="success__back" href="index.html">Вернуться на главную
+              <svg width="26" height="15">
+                <use xlink:href="img/icons/sprite.svg#left-arrow"></use>
+              </svg></a></div>
+          <div class="success__title">Благодарим вас за сделанный заказ! Дарите счастье вмесе с Aurora Toys!</div>
+        </div>
       </div>
     </div>
     <script src="js/jquery-3.5.1.js"></script>
