@@ -268,6 +268,8 @@ function dataFill() {
     document.querySelector('.card').setAttribute('data-card', currentToy.nameEn);
 
     if (currentToy.nameEn == 'corgi') {
+        const marginDelete = document.querySelector('.toy-description');
+        marginDelete.style.marginBottom = 0;
         console.log('Корги');
         toyColor.style.display = 'flex';
         corgiColor_1.style.display = 'flex';
@@ -288,6 +290,8 @@ function dataFill() {
     }
 
     if (currentToy.nameEn == 'cat') {
+        const marginDelete = document.querySelector('.toy-description');
+        marginDelete.style.marginBottom = 0;
         console.log('Кот');
         toyColor.style.display = 'flex';
         catColor_1.style.display = 'flex';
