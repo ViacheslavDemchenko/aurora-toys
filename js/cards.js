@@ -534,7 +534,7 @@ $('.to-cart-btn').on('click', function(){
        that.clone()
            .css({'width' : w,
 		'position' : 'absolute',
-		'z-index' : '9999',
+		'z-index' : '20000',
 		top: that.offset().top,
 		left:that.offset().left})
            .appendTo("body")
