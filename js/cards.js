@@ -27,6 +27,7 @@ const catColor_2 = document.querySelector('.cat-color_2');
 cardDetails.forEach(btn => {
     btn.addEventListener('click', () => {
         overlay.classList.add('overlay--active');
+        card.classList.add('card--active');
         body.classList.add('no-scroll');
     });
 });
@@ -524,18 +525,23 @@ function sum(obj) {
 }
 
 
-// var friends = new Object();
+$('.to-cart-btn').on('click', function(){
 
-// friends.steve = new Object();
-// friends.steve.firstName = "Steve";
-// friends.steve.lastName = "Jobs";
-// friends.steve.number = "20-456-88";
-// friends.steve.address = "Apple";
-
-// friends.bill = new Object();
-// friends.bill.firstName = "Bill";
-// friends.bill.lastName = "gates";
-// friends.bill.number = "20-456-88";
-// friends.bill.address = "Windows";
-
-// console.log(friends);
+	let that = $(this).closest('.catalog-slide').find('img');
+	let bascket = $(".cart");
+	let w = that.width();
+	
+       that.clone()
+           .css({'width' : w,
+		'position' : 'absolute',
+		'z-index' : '9999',
+		top: that.offset().top,
+		left:that.offset().left})
+           .appendTo("body")
+           .animate({opacity: 0.5,
+               left: bascket.offset()['left'],
+               top: bascket.offset()['top'],
+               width: 20}, 1000, function() {	
+				$(this).remove();
+			});
+});

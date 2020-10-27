@@ -27,6 +27,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
   text-rendering: optimizelegibility;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
@@ -557,6 +558,7 @@ template {
   src: url("../fonts/AmaticSC-Bold/AmaticSC-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/AmaticSC-Bold/AmaticSC-Bold.svg#AmaticSC-Bold") format("svg"), url("../fonts/AmaticSC-Bold/AmaticSC-Bold.ttf") format("truetype"), url("../fonts/AmaticSC-Bold/AmaticSC-Bold.woff") format("woff"), url("../fonts/AmaticSC-Bold/AmaticSC-Bold.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Montserrat-Regular */
@@ -567,6 +569,7 @@ template {
   src: url("../fonts/Montserrat-Regular/Montserrat-Regular.svg#Montserrat-Regular") format("svg"), url("../fonts/Montserrat-Regular/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular/Montserrat-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Montserrat-SemiBold */
@@ -577,6 +580,7 @@ template {
   src: url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.svg#Montserrat-SemiBold") format("svg"), url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.ttf") format("truetype"), url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Teko-Light */
@@ -587,6 +591,7 @@ template {
   src: url("../fonts/Teko-Light/Teko-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Teko-Light/Teko-Light.svg#Teko-Light") format("svg"), url("../fonts/Teko-Light/Teko-Light.ttf") format("truetype"), url("../fonts/Teko-Light/Teko-Light.woff") format("woff"), url("../fonts/Teko-Light/Teko-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 /* MIXINS & VARIABLES */
@@ -614,7 +619,7 @@ template {
 .header {
   position: relative;
   width: 100%;
-  background-image: url(../img/orange-arc.svg), url(../img/header-bg-desktop@1x.jpg);
+  background-image: url(../img/orange-arc.svg), url(../img/header-bg-mobile@1x.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: 43% 36px, center;
   background-size: contain, cover;
@@ -1085,10 +1090,6 @@ template {
   width: 100%;
 }
 
-.form .input-block:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-
 .form label {
   font-family: "Montserrat-Regular";
   font-weight: normal;
@@ -1098,8 +1099,9 @@ template {
 }
 
 .form input[type="submit"] {
-  width: 10rem;
-  height: 3.125rem;
+  width: 8.75rem;
+  height: 2.5rem;
+  margin-top: 0.625rem;
   background: #32BEA6;
   border-radius: 0.625rem;
   border: none;
@@ -1818,6 +1820,10 @@ template {
   flex-direction: column;
   padding: 0.625rem 1.5rem 0 1.5rem;
   background: #fff;
+}
+
+.card--active {
+  display: flex;
 }
 
 .card .logo {
@@ -3767,6 +3773,7 @@ template {
 
 @media (min-width: 1440px) {
   .header {
+    background-image: url(../img/orange-arc.svg), url(../img/header-bg-desktop@1x.jpg);
     background-position: 43% 0, center;
   }
 
@@ -3892,6 +3899,14 @@ template {
     height: 6.5rem;
   }
 
+  .form .input-block:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .form input[type="submit"] {
+    margin-top: 0;
+  }
+
   .top-menu .menu__link {
     font-size: 1.875rem;
   }
@@ -3990,6 +4005,12 @@ template {
     top: 5.625rem;
     width: 5.625rem;
     height: 3.4375rem;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) and (min-resolution: 192dpi), (min-resolution: 192dpi) and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .header {
+    background-image: url(../img/orange-arc.svg), url(../img/header-bg-desktop@2x.jpg);
   }
 }
 
@@ -4303,8 +4324,8 @@ template {
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1440px), (min-resolution: 192dpi) and (max-width: 1440px) {
   .header {
-    background-image: url(../img/orange-arc.svg), url(../img/header-bg-desktop@2x.jpg);
+    background-image: url(../img/orange-arc.svg), url(../img/header-bg-mobile@2x.jpg);
   }
 }

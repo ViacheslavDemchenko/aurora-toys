@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="icon" href="#!" type="image/x-icon">
     <link rel="shortcut icon" href="#!" type="image/x-icon">
@@ -82,7 +82,11 @@
             </div>
           </div>
         </div>
-        <div class="tree"><img class="tree-img" src="img/tree@1x.png" width="839" height="1138">
+        <div class="tree">
+          <picture>
+            <source srcset="img/tree@1x.webp, img/tree@2x.webp 2x" type="image/webp">
+            <source srcset="img/tree@1x.png, img/tree@2x.png 2x" type="image/png"><img class="tree-img" src="img/tree@1x.png" srcset="tree@2x.png" width="839" height="1138">
+          </picture>
           <div class="bisquit-content bisquit-content-1">
             <div class="bisquit__title">Это замечательно</div>
             <div class="bisquit__text">Нашим игрушкам рады все. Без исключений</div>
@@ -90,15 +94,27 @@
           <div class="bisquit-content bisquit-content-2">
             <div class="bisquit__title">Это же круто</div>
             <div class="bisquit__text">У нас ты можешь приобрести игрушки по самой выгодной цене</div>
-          </div><img class="bisquit-1" src="img/biscuit@1x.png" width="274" height="274">
+          </div>
+          <picture>
+            <source srcset="img/biscuit@1x.webp, img/biscuit@2x.webp 2x" type="image/webp">
+            <source srcset="img/biscuit@1x.png, img/biscuit@2x.png 2x" type="image/png"><img class="bisquit-1" src="img/biscuit@1x.png" srcset="biscuit@2x.png" width="274" height="274">
+          </picture>
           <div class="bisquit-content bisquit-content-3">
             <div class="bisquit__title">Это приятно</div>
             <div class="bisquit__text">Скорее купи себе плюшевого друга и порадуй своих близких</div>
-          </div><img class="bisquit-2" src="img/biscuit@1x.png" width="274" height="274">
+          </div>
+          <picture>
+            <source srcset="img/biscuit@1x.webp, img/biscuit@2x.webp 2x" type="image/webp">
+            <source srcset="img/biscuit@1x.png, img/biscuit@2x.png 2x" type="image/png"><img class="bisquit-2" src="img/biscuit@1x.png" srcset="biscuit@2x.png" width="274" height="274">
+          </picture>
           <div class="bisquit-content bisquit-content-4">
             <div class="bisquit__title">Это удобно</div>
             <div class="bisquit__text">Доставка<br>по всей России</div>
-          </div><img class="bisquit-3" src="img/biscuit@1x.png" width="274" height="274">
+          </div>
+          <picture>
+            <source srcset="img/biscuit@1x.webp, img/biscuit@2x.webp 2x" type="image/webp">
+            <source srcset="img/biscuit@1x.png, img/biscuit@2x.png 2x" type="image/png"><img class="bisquit-3" src="img/biscuit@1x.png" srcset="biscuit@2x.png" width="274" height="274">
+          </picture>
         </div>
       </section>
       <section class="order">
@@ -169,9 +185,9 @@
         </div>
       </footer>
     </div>
-    <script src="js/jquery-3.5.1.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main-slider.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/jquery-3.5.1.js" defer></script>
+    <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/main-slider.js" defer></script>
+    <script src="js/main.min.js" defer></script>
   </body>
 </html>

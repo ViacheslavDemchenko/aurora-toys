@@ -12,6 +12,7 @@
        url('../fonts/AmaticSC-Bold/AmaticSC-Bold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Montserrat-Regular */
@@ -26,6 +27,7 @@
        url('../fonts/Montserrat-Regular/Montserrat-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Montserrat-SemiBold */
@@ -40,6 +42,7 @@
        url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Teko-Light */
@@ -54,4 +57,5 @@
        url('../fonts/Teko-Light/Teko-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }

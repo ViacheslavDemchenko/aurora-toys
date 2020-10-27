@@ -40,7 +40,7 @@ $toy_sum6 = htmlspecialchars($_POST["toy-price-6"]);
 
 $total_sum = htmlspecialchars($_POST["total"]);
 
-$to = "frontend-ninja@yandex.ru";
+$to = "aut.zakaz7@gmail.com";
 $subject = "Новый заказ с сайта Aurora Toys";
 $message =
     '
