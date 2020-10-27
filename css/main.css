@@ -1514,11 +1514,11 @@ template {
 
 .tree {
   position: relative;
-  width: 102%;
+  width: 94%;
   padding-top: 1.875rem;
   display: flex;
-  justify-content: flex-end;
   order: -1;
+  margin-left: auto;
 }
 
 .tree .tree-img {
