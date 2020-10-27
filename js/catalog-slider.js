@@ -3,6 +3,7 @@ $('.catalog-slider.owl-carousel').owlCarousel({
     loop: true,
     nav: false,
     dots: false,
+    mouseDrag: false,
     stagePadding: -20,
     responsiveClass:true,
     responsive:{
