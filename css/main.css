@@ -1925,18 +1925,18 @@ template {
 
 .card .to-cart-btn--card-check::before {
   z-index: 500;
-  left: 1.25rem;
-  width: 3.125rem;
-  height: 3.125rem;
+  left: 0.75rem;
+  width: 1.875rem;
+  height: 1.875rem;
   border-radius: 50%;
   background: #32BEA6;
 }
 
 .card .to-cart-btn--card-check::after {
   z-index: 1000;
-  left: 1.875rem;
-  width: 1.875rem;
-  height: 1.875rem;
+  left: 1.25rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background-image: url(../img/check-mark.svg);
   background-position: center;
   background-size: 95%;
@@ -3486,6 +3486,18 @@ template {
     right: 0.9375rem;
   }
 
+  .card .to-cart-btn--card-check::before {
+    left: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .card .to-cart-btn--card-check::after {
+    left: 1.75rem;
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+
   .card .toy-info {
     margin: 3.125rem 0 2.125rem 0;
   }
@@ -3681,6 +3693,18 @@ template {
     width: 21rem;
     height: 17.8125rem;
     margin: -11.4375rem 0 5.8125rem 0;
+  }
+
+  .card .to-cart-btn--card-check::before {
+    left: 1.25rem;
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .card .to-cart-btn--card-check::after {
+    left: 1.875rem;
+    width: 1.875rem;
+    height: 1.875rem;
   }
 
   .card .toy-size,
