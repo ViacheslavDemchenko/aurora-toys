@@ -500,6 +500,10 @@ cardtoCartBtn.forEach(btn => {
             console.log(cart);
         }
         toyNum();
+        btn.classList.add('to-cart-btn--card-check');
+        setTimeout( () => {
+            btn.classList.remove('to-cart-btn--card-check');
+        }, 1000);
     });
 });
 
@@ -545,3 +549,6 @@ $('.to-cart-btn').on('click', function(){
 				$(this).remove();
 			});
 });
+
+
+

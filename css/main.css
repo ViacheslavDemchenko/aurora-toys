@@ -1912,8 +1912,35 @@ template {
 }
 
 .card .to-cart-btn--card {
+  position: relative;
   color: #FFFFFF;
   background: #FF9C36;
+}
+
+.card .to-cart-btn--card-check::before,
+.card .to-cart-btn--card-check::after {
+  position: absolute;
+  content: "";
+}
+
+.card .to-cart-btn--card-check::before {
+  z-index: 500;
+  left: 1.25rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  background: #32BEA6;
+}
+
+.card .to-cart-btn--card-check::after {
+  z-index: 1000;
+  left: 1.875rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-image: url(../img/check-mark.svg);
+  background-position: center;
+  background-size: 95%;
+  background-repeat: no-repeat;
 }
 
 .card .card-close {
